@@ -1,0 +1,28 @@
+- name: GVL Desktop - Copy wallpaper
+  copy: src=desktop/wallpaper/lubuntu-default-wallpaper.png dest=/usr/share/lubuntu/wallpapers/lubuntu-default-wallpaper.png mode=0755
+
+- name: GVL Desktop - Copy desktop scripts
+  copy: src=desktop/scripts/{{ item }} dest=/home/ubuntu/{{ item }} mode=0755
+  with_items:
+    - add_newuser.sh
+    - ipython_screen.sh
+    - setup_utils_interactive.sh
+    - setup_utils_silent.sh
+    - startup_ipython.sh
+
+- name: GVL Desktop - Create desktop folder
+  file:
+    path: "/home/ubuntu/Desktop"
+    state: "directory"
+    owner: "ubuntu"
+    group: "ubuntu"
+    mode: "0755"
+
+- name: GVL Desktop - Copy desktop shortcuts
+  copy: src=desktop/shortcuts/{{ item }} dest=/home/ubuntu/Desktop/{{ item }} mode=0755
+  with_items:
+    - add_user.desktop
+    - setup_ipython.desktop
+    - setup_utilities_automatic.desktop
+    - setup_utilities_interactive.desktop
+    - terminal.desktop

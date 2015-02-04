@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Set up GVL Utilities Interactive
+Comment=Run scripts to configure command-line utilities, RStudio, IPython Notebook
+Exec=lxterminal --command "/home/ubuntu/setup_utils_interactive.sh"
+Icon=utilities-terminal-symbolic
+Terminal=false
+Type=Application

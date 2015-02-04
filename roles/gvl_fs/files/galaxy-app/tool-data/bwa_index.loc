@@ -1,0 +1,55 @@
+#This is a sample file distributed with Galaxy that enables tools
+#to use a directory of BWA indexed sequences data files. You will need
+#to create these data files and then create a bwa_index.loc file
+#similar to this one (store it in this directory) that points to
+#the directories in which those files are stored. The bwa_index.loc
+#file has this format (longer white space characters are TAB characters):
+#
+#<unique_build_id>   <dbkey>   <display_name>   <file_path>
+#
+#So, for example, if you had phiX indexed stored in 
+#/depot/data2/galaxy/phiX/base/, 
+#then the bwa_index.loc entry would look like this:
+#
+#phiX174   phiX   phiX Pretty   /depot/data2/galaxy/phiX/base/phiX.fa
+#
+#and your /depot/data2/galaxy/phiX/base/ directory
+#would contain phiX.fa.* files:
+#
+#-rw-r--r--  1 james    universe 830134 2005-09-13 10:12 phiX.fa.amb
+#-rw-r--r--  1 james    universe 527388 2005-09-13 10:12 phiX.fa.ann
+#-rw-r--r--  1 james    universe 269808 2005-09-13 10:12 phiX.fa.bwt
+#...etc...
+#
+#Your bwa_index.loc file should include an entry per line for each
+#index set you have stored. The "file" in the path does not actually
+#exist, but it is the prefix for the actual index files.  For example:
+#
+#phiX174				phiX	phiX174			/depot/data2/galaxy/phiX/base/phiX.fa
+#hg18canon				hg18	hg18 Canonical	/depot/data2/galaxy/hg18/base/hg18canon.fa
+#hg18full				hg18	hg18 Full		/depot/data2/galaxy/hg18/base/hg18full.fa
+#/orig/path/hg19.fa		hg19	hg19			/depot/data2/galaxy/hg19/base/hg19.fa
+#...etc...
+#
+#Note that for backwards compatibility with workflows, the unique ID of
+#an entry must be the path that was in the original loc file, because that
+#is the value stored in the workflow for that parameter. That is why the
+#hg19 entry above looks odd. New genomes can be better-looking.
+#
+dm3	dm3	D melanogaster (dm3)	/mnt/galaxyIndices/genomes/dm3/bwa_index/dm3.fa
+araTha_tair9	araTha_tair9	Arabidopsis thaliana (TAIR9)	/mnt/galaxyIndices/genomes/Arabidopsis_thaliana_TAIR9/bwa_index/Arabidopsis_thaliana_TAIR9.fa
+phix	phix	phiX174	/mnt/galaxyIndices/genomes/phiX/bwa_index/phiX.fa
+ce10	ce10	C elegans (ce10)	/mnt/galaxyIndices/genomes/ce10/bwa_index/ce10.fa
+danRer7	danRer7	Zebrafish (danRer7)	/mnt/galaxyIndices/genomes/danRer7/bwa_index/danRer7.fa
+hg19	hg19	Human (hg19)	/mnt/galaxyIndices/genomes/hg19/bwa_index/hg19.fa
+hg_g1k_v37	hg_g1k_v37	Human (hg_g1k_v37)	/mnt/galaxyIndices/genomes/hg_g1k_v37/bwa_index/hg_g1k_v37.fa
+hg38	hg38	Human (hg38)	/mnt/galaxyIndices/genomes/hg38/bwa_index/hg38.fa
+mm10	mm10	Mouse (mm10)	/mnt/galaxyIndices/genomes/mm10/bwa_index/mm10.fa
+mm9	mm9	Mouse (mm9)	/mnt/galaxyIndices/genomes/mm9/bwa_index/mm9.fa
+rn5	rn5	Rat (rn5)	/mnt/galaxyIndices/genomes/rn5/bwa_index/rn5.fa
+rn6	rn6	Rat (rn6)	/mnt/galaxyIndices/genomes/rn6/bwa_index/rn6.fa
+sacCer2	sacCer2	Saccharomyces cerevisiae (sacCer2)	/mnt/galaxyIndices/genomes/sacCer2/bwa_index/sacCer2.fa
+sacCer3	sacCer3	Saccharomyces cerevisiae (sacCer3)	/mnt/galaxyIndices/genomes/sacCer3/bwa_index/sacCer3.fa
+xenTro2	xenTro2	X tropicalis (xenTro2)	/mnt/galaxyIndices/genomes/xenTro2/bwa_index/xenTro2.fa
+bosTau7	bosTau7	Cow (bosTau7)	/mnt/galaxyIndices/genomes/bosTau7/bwa_index/bosTau7.fa
+oviAri3	oviAri3	Sheep (oviAri3)	/mnt/galaxyIndices/genomes/oviAri3/bwa_index/oviAri3.fa

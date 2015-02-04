@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Terminal
+Comment=Start the IPython Notebook service
+Exec=lxterminal
+Icon=utilities-terminal-symbolic
+Terminal=false
+Type=Application

@@ -1,0 +1,8 @@
+---
+# Configure nginx
+
+- name: Overwrite with GVL nginx conf file
+  template: src=nginx.j2 dest=/etc/nginx/nginx.conf
+
+- name: Reload nginx config
+  shell: nginx -s reload

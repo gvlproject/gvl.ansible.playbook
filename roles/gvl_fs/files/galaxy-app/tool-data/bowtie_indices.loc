@@ -1,0 +1,54 @@
+#This is a sample file distributed with Galaxy that enables tools
+#to use a directory of Bowtie indexed sequences data files. You will
+#need to create these data files and then create a bowtie_indices.loc
+#file similar to this one (store it in this directory) that points to
+#the directories in which those files are stored. The bowtie_indices.loc
+#file has this format (longer white space characters are TAB characters):
+#
+#<unique_build_id>   <dbkey>   <display_name>   <file_base_path>
+#
+#So, for example, if you had hg18 indexed stored in
+#/depot/data2/galaxy/bowtie/hg18/,
+#then the bowtie_indices.loc entry would look like this:
+#
+#hg18	hg18	hg18	/depot/data2/galaxy/bowtie/hg18/hg18
+#
+#and your /depot/data2/galaxy/bowtie/hg18/ directory
+#would contain hg18.*.ebwt files:
+#
+#-rw-r--r--  1 james    universe 830134 2005-09-13 10:12 hg18.1.ebwt
+#-rw-r--r--  1 james    universe 527388 2005-09-13 10:12 hg18.2.ebwt
+#-rw-r--r--  1 james    universe 269808 2005-09-13 10:12 hg18.3.ebwt
+#...etc...
+#
+#Your bowtie_indices.loc file should include an entry per line for each
+#index set you have stored. The "file" in the path does not actually
+#exist, but it is the prefix for the actual index files. For example:
+#
+#hg18canon			hg18	hg18 Canonical	/depot/data2/galaxy/bowtie/hg18/hg18canon
+#hg18full			hg18	hg18 Full		/depot/data2/galaxy/bowtie/hg18/hg18full
+#/orig/path/hg19	hg19	hg19			/depot/data2/galaxy/bowtie/hg19/hg19
+#...etc...
+#
+#Note that for backwards compatibility with workflows, the unique ID of
+#an entry must be the path that was in the original loc file, because that
+#is the value stored in the workflow for that parameter. That is why the
+#hg19 entry above looks odd. New genomes can be better-looking.
+#
+dm3	dm3	D melanogaster (dm3)	/mnt/galaxyIndices/genomes/dm3/bowtie_index/dm3
+araTha_tair9	araTha_tair9	Arabidopsis thaliana (TAIR9)	/mnt/galaxyIndices/genomes/Arabidopsis_thaliana_TAIR9/bowtie_index/Arabidopsis_thaliana_TAIR9
+phix	phix	phiX174	/mnt/galaxyIndices/genomes/phiX/bowtie_index/phix
+ce10	ce10	C elegans (ce10)	/mnt/galaxyIndices/genomes/ce10/bowtie_index/ce10
+danRer7	danRer7	Zebrafish (danRer7)	/mnt/galaxyIndices/genomes/danRer7/bowtie_index/danRer7
+hg19	hg19	Human (hg19)	/mnt/galaxyIndices/genomes/hg19/bowtie_index/hg19
+hg_g1k_v37	hg_g1k_v37	Human (hg_g1k_v37)	/mnt/galaxyIndices/genomes/hg_g1k_v37/bowtie_index/hg_g1k_v37
+hg38	hg38	Human (hg38)	/mnt/galaxyIndices/genomes/hg38/bowtie_index/hg38
+mm10	mm10	Mouse (mm10)	/mnt/galaxyIndices/genomes/mm10/bowtie_index/mm10
+mm9	mm9	Mouse (mm9)	/mnt/galaxyIndices/genomes/mm9/bowtie_index/mm9
+rn5	rn5	Rat (rn5)	/mnt/galaxyIndices/genomes/rn5/bowtie_index/rn5
+rn6	rn6	Rat (rn6)	/mnt/galaxyIndices/genomes/rn6/bowtie_index/rn6
+sacCer2	sacCer2	Saccharomyces cerevisiae (sacCer2)	/mnt/galaxyIndices/genomes/sacCer2/bowtie_index/sacCer2
+sacCer3	sacCer3	Saccharomyces cerevisiae (sacCer3)	/mnt/galaxyIndices/genomes/sacCer3/bowtie_index/sacCer3
+xenTro2	xenTro2	X tropicalis (xenTro2)	/mnt/galaxyIndices/genomes/xenTro2/bowtie_index/xenTro2
+bosTau7	bosTau7	Cow (bosTau7)	/mnt/galaxyIndices/genomes/bosTau7/bowtie_index/bosTau7
+oviAri3	oviAri3	Sheep (oviAri3)	/mnt/galaxyIndices/genomes/oviAri3/bowtie_index/oviAri3

@@ -1,0 +1,44 @@
+#This is a sample file distributed with Galaxy that is used by some
+#tools.  The twobit.loc file has this format (white space characters 
+#are TAB characters):
+#
+#<Build>	<FullPathToFile>
+#
+#So, for example, if you had droPer1 twobit files stored in 
+#/depot/data2/galaxy/droPer1/, then the twobit.loc entry 
+#would look like this:
+#
+#droPer1	/depot/data2/galaxy/droPer1/droPer1.2bit
+#
+#and your /depot/data2/galaxy/droPer1/ directory would 
+#contain all of your twobit files (e.g.):
+#
+#-rw-rw-r--   1 nate   galaxy 48972650 2007-05-04 11:27 droPer1.2bit
+#...etc...
+#
+#Your twobit.loc file should include an entry per line for each twobit 
+#file you have stored.  For example:
+#
+#droPer1	/depot/data2/galaxy/droPer1/droPer1.2bit
+#apiMel2	/depot/data2/galaxy/apiMel2/apiMel2.2bit
+#droAna1	/depot/data2/galaxy/droAna1/droAna1.2bit
+#droAna2	/depot/data2/galaxy/droAna2/droAna2.2bit
+#...etc...
+
+
+dm3	/mnt/galaxyIndices/genomes/dm3/seq/dm3.2bit
+araTha_tair9	/mnt/galaxyIndices/genomes/Arabidopsis_thaliana_TAIR9/seq/Arabidopsis_thaliana_TAIR9.2bit
+phix	/mnt/galaxyIndices/genomes/phiX/seq/phiX.2bit
+ce10	/mnt/galaxyIndices/genomes/ce10/seq/ce10.2bit
+danRer7	/mnt/galaxyIndices/genomes/danRer7/seq/danRer7.2bit
+hg19	/mnt/galaxyIndices/genomes/hg19/seq/hg19.2bit
+hg_g1k_v37	/mnt/galaxyIndices/genomes/hg_g1k_v37/seq/hg_g1k_v37.2bit
+hg38	/mnt/galaxyIndices/genomes/hg38/seq/hg38.2bit
+mm9	/mnt/galaxyIndices/genomes/mm9/seq/mm9.2bit
+rn5	/mnt/galaxyIndices/genomes/rn5/seq/rn5.2bit
+rn6	/mnt/galaxyIndices/genomes/rn6/seq/rn6.2bit
+sacCer2	/mnt/galaxyIndices/genomes/sacCer2/seq/sacCer2.2bit
+sacCer3	/mnt/galaxyIndices/genomes/sacCer3/seq/sacCer3.2bit
+bosTau7	/mnt/galaxyIndices/genomes/bosTau7/seq/bosTau7.2bit
+oviAri3	/mnt/galaxyIndices/genomes/oviAri3/seq/oviAri3.2bit
+xenTro2	/mnt/galaxyIndices/genomes/xenTro2/seq/xenTro2.2bit

@@ -1,0 +1,44 @@
+- name: GVLDash - Create GVL webapp user group
+  group: name=webapps state=present
+
+- name: GVLDash - Create GVL web user
+  user: name={{ gvldash_webuser }} comment="GVL Web User" group=webapps shell=/bin/bash
+
+- name: GVLDash - Create webapp directories
+  file:
+    path: "{{ gvldash_path }}"
+    state: 'directory'
+    owner: "{{ gvldash_webuser }}"
+    group: "webapps"
+    mode: "0755"
+
+- name: GVLDash - Checkout application source
+  git: repo={{ gvldash_repository }} dest={{ gvldash_path }} accept_hostkey=yes
+  sudo: true
+  sudo_user: "{{ gvldash_webuser }}"
+
+- name: GVLDash - Install requirements
+  pip: requirements={{ gvldash_path }}/requirements.txt virtualenv={{ gvldash_path }}/.venv state=latest
+  sudo: true
+  sudo_user: "{{ gvldash_webuser }}"
+  tags:
+    - install
+    - deploy
+
+- name: GVLDash - Django collectstatic
+  django_manage: command=collectstatic app_path={{ gvldash_path }}/gvldash virtualenv={{ gvldash_path }}/.venv
+  sudo: true
+  sudo_user: "{{ gvldash_webuser }}"
+  tags:
+    - install
+    - deploy
+
+- name: GVLDash - Ensure nginx can access static path
+  file:
+    path: '{{ gvldash_path }}/gvldash/static/'
+    state: 'directory'
+    group: 'www-data'
+    mode: '0755'
+
+- name: GVLDash - Configure gvldash to run an upstart job
+  template: src=gvldash.j2 dest=/etc/init/gvldash.conf
