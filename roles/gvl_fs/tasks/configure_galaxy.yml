@@ -48,6 +48,7 @@
   command: chdir={{ galaxy_server_dir }} {{ galaxy_venv_dir }}/bin/python install_tool_shed_tools.py -f shed_tool_list.yaml.gvl -a {{ api_key.stdout_lines[0] }} -g http://127.0.0.1:{{ galaxy_webserver_port }}/
   sudo: yes
   sudo_user: "{{ galaxy_user_name }}"
+  ignore_errors: true
 
 - name: GVL Galaxy - Stop Galaxy
   command: "{{ galaxy_server_dir }}/run.sh --stop-daemon"

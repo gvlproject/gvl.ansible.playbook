@@ -93,8 +93,8 @@ def get_or_create_user( app, email, password, username ):
         return create_user( app, email, password, username )
 
 def delete_user( app, username ):
-    user = app.model.User( username=username )
-    app.sa_session.remove( user )
+    user = app.sa_session.query( app.model.User ).filter( app.model.User.table.c.username==username ).first()
+    app.sa_session.delete( user )
     app.sa_session.flush()
     return user
 
