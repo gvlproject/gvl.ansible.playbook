@@ -1,0 +1,6 @@
+galaxyprojectdotorg.galaxy-os
+smola.java
+galaxyprojectdotorg.cloudman-image
+galaxyprojectdotorg.cloudman-database
+galaxyprojectdotorg.trackster
+galaxyprojectdotorg.galaxy

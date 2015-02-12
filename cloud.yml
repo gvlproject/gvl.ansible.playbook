@@ -1,0 +1,61 @@
+---
+# file: cloud.yml
+#   Use this file to setup components required for the GVL
+
+# Before running roles inside this playbook, copy
+# ``inventory/builders.sample`` as ``inventory/builders`` and edit it
+# to provide info about your instance(s)
+
+# To build the base image, use this role via the following command (make sure
+# you provided an instance IP in ``inventory/builders`` for
+# ``image-builder`` host group):
+#
+#   % ansible-playbook -i inventory/builders cloud.yml --tags "machine-image"
+#     --extra-vars vnc_password=<make_up_a_pwd> [--extra-vars cleanup=yes]
+#
+- hosts: image-builder
+  # gather_facts: False  # Uncomment during dev only
+  sudo: yes
+  roles:
+    - galaxyprojectdotorg.galaxy-os
+    - galaxyprojectdotorg.cloudman-image
+    - gvl_image
+  tags: machine-image
+
+# To build the galaxyFS, use this role via the following command (make sure
+# you provided an instance IP in ``inventory/builders`` for
+# ``galaxyFS-builder`` host group):
+#
+#   % ansible-playbook -i inventory/builders cloud.yml --tags "galaxyFS"
+#
+- hosts: galaxyFS-builder
+  gather_facts: False  # Not making system-level changes so skip
+  pre_tasks:
+    - name: Assure galaxyFS dir exists
+      file: path={{ galaxyFS_base_dir }} state=directory owner={{ galaxy_user_name }} group={{ galaxy_user_name }}
+      sudo_user: root
+    - name: Create shed tools dir
+      file: state=directory path={{ galaxy_shed_tools_dir }}
+    - name: Create database dir
+      file: path={{ galaxy_db_dir }} state=directory owner=postgres group=postgres
+      sudo_user: root
+  roles:
+     - role: galaxyprojectdotorg.cloudman-database
+       sudo: yes
+       sudo_user: postgres
+     - galaxyprojectdotorg.galaxy
+     - galaxyprojectdotorg.trackster
+     - gvl_fs
+  post_tasks:
+    - name: Create Galaxy Install DB
+      command: "{{ galaxy_venv_dir }}/bin/python {{ galaxy_server_dir }}/scripts/create_db.py -c {{ galaxy_config_file }} install chdir={{ galaxy_server_dir }}"
+    - name: Set Galaxy's PYTHON_EGG_CACHE
+      lineinfile: dest={{ galaxy_server_dir }}/run.sh line="export PYTHON_EGG_CACHE={{ galaxyFS_base_dir }}/.python_eggs" insertafter="^#!/bin/sh"
+  handlers:
+    - name: Stop PostgreSQL
+      shell: "{{ postgresql_bin_dir }}/pg_ctl -D {{ galaxy_db_dir }} stop"
+      sudo: yes
+      sudo_user: postgres
+  sudo_user: "{{ galaxy_user_name }}"
+  sudo: yes
+  tags: galaxyFS

@@ -39,23 +39,23 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: !!python/unicode 'bowtie2'
   owner: !!python/unicode 'devteam'
-  tool_panel_section_id: solexa_tools
+  tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: !!python/unicode 'bowtie_color_wrappers'
   owner: !!python/unicode 'devteam'
-  tool_panel_section_id: solexa_tools
+  tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: !!python/unicode 'bowtie_wrappers'
   owner: !!python/unicode 'devteam'
-  tool_panel_section_id: solexa_tools
+  tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: !!python/unicode 'bwa_0_7_10'
   owner: !!python/unicode 'devteam'
-  tool_panel_section_id: solexa_tools
+  tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: !!python/unicode 'bwa_wrappers'
   owner: !!python/unicode 'devteam'
-  tool_panel_section_id: solexa_tools
+  tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: !!python/unicode 'categorize_elements_satisfying_criteria'
   owner: !!python/unicode 'devteam'
@@ -431,11 +431,11 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: !!python/unicode 'lastz'
   owner: !!python/unicode 'devteam'
-  tool_panel_section_id: solexa_tools
+  tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: !!python/unicode 'lastz_paired_reads'
   owner: !!python/unicode 'devteam'
-  tool_panel_section_id: solexa_tools
+  tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: !!python/unicode 'lca_wrapper'
   owner: !!python/unicode 'devteam'
@@ -848,6 +848,10 @@ tools:
   owner: fubar
   tool_panel_section_id: ngs-rna-tools
   tool_shed_url: http://testtoolshed.g2.bx.psu.edu
+- name: htseq_count
+  owner: lparsons
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: htseq_bams_to_count_matrix
   owner: fubar
   tool_panel_section_id: ngs-rna-tools
@@ -874,5 +878,5 @@ tools:
   tool_shed_url: http://testtoolshed.g2.bx.psu.edu
 - name: bowtie_for_fasta
   owner: qfab
-  tool_panel_section_id: solexa_tools
+  tool_panel_section_id: ngs_mapping
   tool_shed_url: http://testtoolshed.g2.bx.psu.edu

@@ -5,9 +5,9 @@
 
 # Controls which tasks are included, in case you want to execute/update
 # only certain parts of the role.
+install_libraries: yes
+add_system_users: yes
 cm_install_packages: yes
-cm_install_libraries: yes
-cm_add_system_users: yes
 cm_venvburrito: yes
 cm_system_environment: yes  # Also requires cm_venvburrito to be set
 cm_install_s3fs: yes
@@ -41,7 +41,7 @@ vnc_depth: 16
 vnc_geometry: 1024x768
 
 # gvl setup details
-gvl_install_dash: True
+gvl_install_dash: yes
 gvldash_path: /opt/gvldash
 gvldash_repository: https://bitbucket.org/gvl/gvldash
 gvldash_webuser: gvlwebuser

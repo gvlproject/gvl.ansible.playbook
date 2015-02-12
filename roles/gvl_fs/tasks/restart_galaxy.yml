@@ -1,0 +1,15 @@
+- name: GVL Galaxy - Stop Galaxy
+  shell: "{{ galaxy_server_dir }}/run.sh --stop-daemon"
+  sudo: yes
+  sudo_user: "{{ galaxy_user_name }}"
+
+- name: GVL Galaxy - Wait for Galaxy to stop
+  wait_for: port={{ galaxy_webserver_port }} delay=5 state=stopped timeout=150
+
+- name: GVL Galaxy - Start Galaxy
+  shell: "{{ galaxy_server_dir }}/run.sh --daemon"
+  sudo: yes
+  sudo_user: "{{ galaxy_user_name }}"
+
+- name: GVL Galaxy - Wait for Galaxy to start
+  wait_for: port={{ galaxy_webserver_port }} delay=5 state=started timeout=150
