@@ -4,9 +4,11 @@
     "aws_secret_key": "{{env `AWS_SECRET_KEY`}}",
     "vnc_pwd": "{{env `CM_VNC_PWD`}}",
     "gftp_pwd": "{{env `CM_GALAXY_FTP_PWD`}}",
-    "ami_name": "Galaxy CloudMan {{timestamp}}",
+    "image_name": "GVL 3.05 Image {{timestamp}}",
     "source_ami": "ami-98aa1cf0",
-    "instance_type": "t1.micro"
+    "instance_type": "t1.micro",
+    "os_source_image": "d57696ba-5ed2-43fe-bf78-a587829973a9",
+    "os_flavor": "1"
   },
 
 
@@ -18,8 +20,18 @@
     "ssh_username": "ubuntu",
     "source_ami": "{{user `source_ami`}}",
     "instance_type": "{{user `instance_type`}}",
-    "ami_name": "{{user `ami_name`}}"
-  }],
+    "ami_name": "{{user `image_name`}}"
+  },
+  {
+    "type": "openstack",
+    "openstack_provider": "Compute Service",
+    "region": "Melbourne",
+    "ssh_username": "ubuntu",
+    "source_image": "{{user `os_source_image`}}",
+    "flavor": "{{user `os_flavor`}}",
+    "image_name": "{{user `image_name`}}"
+  }
+  ],
   "provisioners": [
   {
     "type": "shell",
@@ -34,9 +46,10 @@
     "type": "ansible-local",
     "playbook_file": "cloud.yml",
     "role_paths": [
-      "roles/galaxyprojectdotorg.cloudman-img",
+      "roles/galaxyprojectdotorg.cloudman-image",
       "roles/galaxyprojectdotorg.galaxy-os",
-      "roles/smola.java"
+      "roles/smola.java",
+      "roles/gvl_image"
     ],
     "extra_arguments": [
        "--extra-vars",
