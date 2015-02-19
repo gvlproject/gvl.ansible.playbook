@@ -29,7 +29,8 @@
     "ssh_username": "ubuntu",
     "source_image": "{{user `os_source_image`}}",
     "flavor": "{{user `os_flavor`}}",
-    "image_name": "{{user `image_name`}}"
+    "image_name": "{{user `image_name`}}",
+    "security_groups": [ "default" ]
   }
   ],
   "provisioners": [
@@ -47,9 +48,13 @@
     "playbook_file": "cloud.yml",
     "role_paths": [
       "roles/galaxyprojectdotorg.cloudman-image",
+      "roles/galaxyprojectdotorg.cloudman-database",
       "roles/galaxyprojectdotorg.galaxy-os",
+      "roles/galaxyprojectdotorg.galaxy",
+      "roles/galaxyprojectdotorg.trackster",
       "roles/smola.java",
-      "roles/gvl_image"
+      "roles/gvl.image",
+      "roles/gvl.filesystem"
     ],
     "extra_arguments": [
        "--extra-vars",

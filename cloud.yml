@@ -19,7 +19,7 @@
   roles:
     - galaxyprojectdotorg.galaxy-os
     - galaxyprojectdotorg.cloudman-image
-    - gvl_image
+    - gvl.image
   tags: machine-image
 
 # To build the galaxyFS, use this role via the following command (make sure
@@ -45,7 +45,7 @@
        sudo_user: postgres
      - galaxyprojectdotorg.galaxy
      - galaxyprojectdotorg.trackster
-     - gvl_fs
+     - gvl.filesystem
   post_tasks:
     - name: Create Galaxy Install DB
       command: "{{ galaxy_venv_dir }}/bin/python {{ galaxy_server_dir }}/scripts/create_db.py -c {{ galaxy_config_file }} install chdir={{ galaxy_server_dir }}"

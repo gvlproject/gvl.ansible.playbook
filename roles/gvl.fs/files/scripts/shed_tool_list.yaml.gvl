@@ -836,7 +836,7 @@ tools:
   owner: simon-gladman
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: http://toolshed.g2.bx.psu.edu
-- name: trimmomatic_0_22
+- name: trimmomatic_0_32
   owner: simon-gladman
   tool_panel_section_id: NGS_QC
   tool_shed_url: http://testtoolshed.g2.bx.psu.edu
