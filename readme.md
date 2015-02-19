@@ -5,8 +5,9 @@ wanting to deploy a customised version of the GVL on a public or private cloud.
 
 There are several roles contained in this playbook; the roles manage
 the build process of different components:
-  * *GVL-Image*: Installs components required for a GVL image snapshot. Implements only the differences from a base cloudman image.
- * *GVL-FS*: Installs components required for a GVL filesystem snapshot. Implements only the differences from a base cloudman filesystem.
+
+  **GVL-Image**: Installs components required for a GVL image snapshot. Implements only the differences from a base cloudman image.
+  **GVL-FS**: Installs components required for a GVL filesystem snapshot. Implements only the differences from a base cloudman filesystem.
 
 The build instructions are identical to cloudman's build instructions, which can be found  [here][building].
 
@@ -29,7 +30,7 @@ instance and set the instance IP address under `image-builder` host group in the
 `builders` file. Also, set `hosts` line in `cloud.yml` to `image-builder` while
 commenting out `connection: local` line. Finally, run the role with
 
-    ansible-galaxy -r requirements_roles.txt -p roles
+    ansible-galaxy install -r requirements_roles.txt -p roles
     ansible-playbook -i inventory/builders cloud.yml --tags "machine-image" --extra-vars vnc_password=<choose a password> --extra-vars cleanup=yes
 
 On average, the build time takes about 30 minutes. *Note that after the playbook
