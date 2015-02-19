@@ -7,6 +7,7 @@ There are several roles contained in this playbook; the roles manage
 the build process of different components:
 
   **GVL-Image**: Installs components required for a GVL image snapshot. Implements only the differences from a base cloudman image.
+
   **GVL-FS**: Installs components required for a GVL filesystem snapshot. Implements only the differences from a base cloudman filesystem.
 
 The build instructions are identical to cloudman's build instructions, which can be found  [here][building].
