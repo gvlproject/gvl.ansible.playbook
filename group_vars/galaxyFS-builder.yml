@@ -142,7 +142,7 @@ gvl_create_archive: True
 cloudman_bucket_name: cm-ng-dev
 galaxy_archive_name: galaxyFS-3.05.tar.gz
 OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
-OS_TENANT_ID: 377
-OS_TENANT_NAME: "GenomicsVL"
-OS_USERNAME: nuwan.goonasekera@unimelb.edu.au
-OS_PASSWORD: NWJhZDdjNjk3ODM1OWY5
+OS_TENANT_ID:
+OS_TENANT_NAME:
+OS_USERNAME:
+OS_PASSWORD:
