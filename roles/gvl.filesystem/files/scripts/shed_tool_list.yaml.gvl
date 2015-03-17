@@ -880,3 +880,7 @@ tools:
   owner: qfab
   tool_panel_section_id: ngs_mapping
   tool_shed_url: http://testtoolshed.g2.bx.psu.edu
+- name: barrnap
+  owner: simon-gladman
+  tool_panel_section_id: ngs_annotation
+  tool_shed_url: http://toolshed.g2.bx.psu.edu
