@@ -1,5 +1,10 @@
-# Install tool packages
-- name: Install required tool packages
+- name: Update apt packages
+  apt: update_cache=yes
+
+- name: Install latest apt packages
+  apt: upgrade=dist
+
+- name: Install required system packages
   apt: pkg={{ item }} state=latest
   with_items:
     - screen
