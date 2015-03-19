@@ -451,6 +451,18 @@ tools:
   owner: !!python/unicode 'devteam'
   tool_panel_section_id: peak_calling
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: !!python/unicode 'spp_tools'
+  owner: !!python/unicode 'stemcellcommons'
+  tool_panel_section_id: peak_calling
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: !!python/unicode 'macs2'
+  owner: !!python/unicode 'stemcellcommons'
+  tool_panel_section_id: peak_calling
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+- name: !!python/unicode 'sidr_package'
+  owner: !!python/unicode 'modencode-dcc'
+  tool_panel_section_id: peak_calling
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #-----------------------------------------------------------
 #ngs_picard - NGS: Picard
@@ -591,6 +603,14 @@ tools:
   tool_shed_url: http://testtoolshed.g2.bx.psu.edu
 - name: htseq_bams_to_count_matrix
   owner: fubar
+  tool_panel_section_id: ngs-rna-tools
+  tool_shed_url: http://testtoolshed.g2.bx.psu.edu
+- name: package_trinityrnaseq_2013_08_14
+  owner: jjohnson
+  tool_panel_section_id: ngs-rna-tools
+  tool_shed_url: http://testtoolshed.g2.bx.psu.edu
+- name: trinityrnaseq
+  owner: jjohnson
   tool_panel_section_id: ngs-rna-tools
   tool_shed_url: http://testtoolshed.g2.bx.psu.edu
 
@@ -919,6 +939,42 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: !!python/unicode 't2t_report'
   owner: !!python/unicode 'devteam'
+  tool_panel_section_id: metagenomics
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: !!python/unicode 'usearch_dereplication'
+  owner: !!python/unicode 'qfab'
+  tool_panel_section_id: metagenomics
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: !!python/unicode 'usearch_cluster_otus'
+  owner: !!python/unicode 'qfab'
+  tool_panel_section_id: metagenomics
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: !!python/unicode 'usearch_uchime'
+  owner: !!python/unicode 'qfab'
+  tool_panel_section_id: metagenomics
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: !!python/unicode 'usearch_map_reads_to_otus'
+  owner: !!python/unicode 'qfab'
+  tool_panel_section_id: metagenomics
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: !!python/unicode 'rdp_multiclassifier'
+  owner: !!python/unicode 'qfab'
+  tool_panel_section_id: metagenomics
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: !!python/unicode 'pynast'
+  owner: !!python/unicode 'qfab'
+  tool_panel_section_id: metagenomics
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: !!python/unicode 'fasttree_linux_64bit'
+  owner: !!python/unicode 'qfab'
+  tool_panel_section_id: metagenomics
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: !!python/unicode 'rarefaction'
+  owner: !!python/unicode 'qfab'
+  tool_panel_section_id: metagenomics
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: !!python/unicode 'collector_curve'
+  owner: !!python/unicode 'qfab'
   tool_panel_section_id: metagenomics
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
