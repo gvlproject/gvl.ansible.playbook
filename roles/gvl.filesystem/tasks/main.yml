@@ -1,3 +1,2 @@
-- include: configure_galaxy.yml
 - include: create_archive.yml
   when: gvl_create_archive

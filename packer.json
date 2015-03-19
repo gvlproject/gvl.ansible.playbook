@@ -49,6 +49,7 @@
     "role_paths": [
       "roles/galaxyprojectdotorg.cloudman-image",
       "roles/galaxyprojectdotorg.cloudman-database",
+      "roles/galaxyprojectdotorg.cloudman-galaxy-setup",
       "roles/galaxyprojectdotorg.galaxy-os",
       "roles/galaxyprojectdotorg.galaxy",
       "roles/galaxyprojectdotorg.trackster",
@@ -64,7 +65,27 @@
        "--tags",
        "machine-image",
        "--extra-vars",
-       "cleanup=yes"
+       "cleanup=no"
     ]
-  }]
+  },
+  {
+    "type": "ansible-local",
+    "playbook_file": "cloud.yml",
+    "role_paths": [
+      "roles/galaxyprojectdotorg.cloudman-image",
+      "roles/galaxyprojectdotorg.cloudman-database",
+      "roles/galaxyprojectdotorg.cloudman-galaxy-setup",
+      "roles/galaxyprojectdotorg.galaxy-os",
+      "roles/galaxyprojectdotorg.galaxy",
+      "roles/galaxyprojectdotorg.trackster",
+      "roles/smola.java",
+      "roles/gvl.image",
+      "roles/gvl.filesystem"
+    ],
+    "extra_arguments": [
+       "--tags",
+       "galaxyFS"
+    ]
+  }
+  ]
 }

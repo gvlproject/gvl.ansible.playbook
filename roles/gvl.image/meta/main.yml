@@ -1,0 +1,17 @@
+---
+gvl_info:
+  author: The GVL Project
+  description: Builds a GVL image (https://genome.edu.au)
+  company: The GVL Project
+  license: MIT
+  min_ansible_version: 1.6
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+  categories:
+  - system
+  - cloud
+  - genomics
+dependencies:
+  - { role: galaxyprojectdotorg.cloudman-image }
