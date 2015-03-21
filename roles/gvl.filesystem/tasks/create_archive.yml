@@ -2,11 +2,13 @@
   shell: "{{ galaxy_server_dir }}/run.sh --stop-daemon"
   sudo: yes
   sudo_user: "{{ galaxy_user_name }}"
+  ignore_errors: yes
 
 - name: Stop PostgreSQL
   shell: "{{ postgresql_bin_dir }}/pg_ctl -D {{ galaxy_db_dir }} stop"
   sudo: yes
   sudo_user: postgres
+  ignore_errors: yes
 
 - name: GVL Galaxy - Create galaxy archive target directory
   file: dest="{{ galaxy_archive_path }}" owner={{ galaxy_user_name }} group={{ galaxy_user_name }} state=directory

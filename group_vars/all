@@ -3,7 +3,6 @@
 #
 #   Common variables across all roles
 
-galaxy_user_name: galaxy
 galaxyFS_base_dir: /mnt/galaxy
 galaxy_server_dir: "{{ galaxyFS_base_dir }}/galaxy-app"
 
