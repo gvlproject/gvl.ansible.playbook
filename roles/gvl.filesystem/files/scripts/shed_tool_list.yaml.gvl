@@ -451,7 +451,7 @@ tools:
   owner: !!python/unicode 'devteam'
   tool_panel_section_id: peak_calling
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: !!python/unicode 'spp_tools'
+- name: !!python/unicode 'spp_tool'
   owner: !!python/unicode 'stemcellcommons'
   tool_panel_section_id: peak_calling
   tool_shed_url: https://toolshed.g2.bx.psu.edu
@@ -459,7 +459,7 @@ tools:
   owner: !!python/unicode 'stemcellcommons'
   tool_panel_section_id: peak_calling
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
-- name: !!python/unicode 'sidr_package'
+- name: !!python/unicode 'idr_package'
   owner: !!python/unicode 'modencode-dcc'
   tool_panel_section_id: peak_calling
   tool_shed_url: https://toolshed.g2.bx.psu.edu
@@ -543,10 +543,10 @@ tools:
   owner: !!python/unicode 'devteam'
   tool_panel_section_id: NGS_QC
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: trimmomatic_0_32
+- name: trimmomatic_032
   owner: simon-gladman
   tool_panel_section_id: NGS_QC
-  tool_shed_url: http://testtoolshed.g2.bx.psu.edu
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
 
 #-----------------------------------------------------------
 #ngs-rna-tools - NGS: RNA Analysis
