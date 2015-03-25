@@ -135,13 +135,18 @@ galaxy_repo: https://bitbucket.org/gvl/galaxy-dist-gvl
 galaxy_changeset_id: gvl
 galaxy_webserver_port: 8080
 galaxy_archive_path: /tmp/galaxy_archive
+galaxy_admin_user_password: "TODO-GenerateRandomOrDeleteBootstrapUser"
 
 # gvl archive upload details
-gvl_create_archive: True
-cloudman_bucket_name: cm-ng-dev
-galaxy_archive_name: galaxyFS-3.05.tar.gz
-OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
-OS_TENANT_ID:
-OS_TENANT_NAME:
-OS_USERNAME:
-OS_PASSWORD:
+gvl_create_archive: False
+# cloudman_bucket_name: cm-ng-dev
+# galaxy_archive_name: galaxyFS-3.05.tar.gz
+# OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
+# OS_TENANT_ID:
+# OS_TENANT_NAME:
+# OS_USERNAME:
+# OS_PASSWORD:
+
+cmg_extra_files:
+  - src: roles/gvl.filesystem/files/galaxy-app
+    dest: "{{ galaxyFS_base_dir }}"
