@@ -7,6 +7,7 @@
 # Just the default values from the underlying role but required for post_tasks
 galaxy_user_name: galaxy
 galaxyFS_base_dir: /mnt/galaxy
+indicesFS_base_dir: /mnt/galaxyIndices
 galaxy_server_dir: "{{ galaxyFS_base_dir }}/galaxy-app"
 
 galaxy_vcs: hg
