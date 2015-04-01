@@ -1,0 +1,13 @@
+- name: Assure galaxyFS dir exists
+  file: path={{ galaxyFS_base_dir }} state=directory owner={{ galaxy_user_name }} group={{ galaxy_user_name }}
+  sudo_user: root
+  tags: galaxyFS
+
+- name: Create shed tools dir
+  file: state=directory path={{ galaxy_shed_tools_dir }}
+  tags: galaxyFS
+
+- name: Create database dir
+  file: path={{ galaxy_db_dir }} state=directory owner=postgres group=postgres
+  sudo_user: root
+  tags: galaxyFS

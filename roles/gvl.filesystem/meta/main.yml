@@ -14,6 +14,7 @@ gvl_info:
   - cloud
   - genomics
 dependencies:
+  - { role: gvl.filesystem-presetup }
   - { role: galaxyprojectdotorg.cloudman-database }
   - { role: galaxyprojectdotorg.galaxy }
   - { role: galaxyprojectdotorg.trackster }

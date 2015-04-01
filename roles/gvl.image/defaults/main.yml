@@ -45,3 +45,7 @@ gvl_install_dash: yes
 gvldash_path: /opt/gvldash
 gvldash_repository: https://bitbucket.org/gvl/gvldash
 gvldash_webuser: gvlwebuser
+
+gvl_version: 3.05 Alpha 2
+gvl_flavour:
+gvl_build_date: "{{ ansible_date_time.iso8601 }}"
