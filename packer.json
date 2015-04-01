@@ -68,6 +68,7 @@
       "roles/galaxyprojectdotorg.trackster",
       "roles/smola.java",
       "roles/gvl.image",
+      "roles/gvl.filesystem-presetup",
       "roles/gvl.filesystem"
     ],
     "extra_arguments": [
@@ -93,6 +94,7 @@
       "roles/galaxyprojectdotorg.trackster",
       "roles/smola.java",
       "roles/gvl.image",
+      "roles/gvl.filesystem-presetup",
       "roles/gvl.filesystem"
     ],
     "extra_arguments": [
