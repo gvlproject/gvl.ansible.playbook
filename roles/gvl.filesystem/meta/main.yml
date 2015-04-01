@@ -15,7 +15,7 @@ gvl_info:
   - genomics
 dependencies:
   - { role: gvl.filesystem-presetup }
-  - { role: galaxyprojectdotorg.cloudman-database, sudo: yes, sudo_user: postgres }
+  - { role: galaxyprojectdotorg.cloudman-database }
   - { role: galaxyprojectdotorg.galaxy }
   - { role: galaxyprojectdotorg.trackster }
   - { role: galaxyprojectdotorg.cloudman-galaxy-setup }
