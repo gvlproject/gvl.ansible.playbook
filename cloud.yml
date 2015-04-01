@@ -28,15 +28,14 @@
 #
 #   % ansible-playbook -i inventory/builders cloud.yml --tags "galaxyFS"
 #
+# - hosts: localhost
+#   connection: local
 - hosts: galaxyFS-builder
   vars:
     gvl_version: 3.05 Alpha 2
     gvl_flavour:
     gvl_build_date: "{{ ansible_date_time.iso8601 }}"
   gather_facts: False  # Not making system-level changes so skip
-# - hosts: localhost
-#   connection: local
-  sudo: yes
   roles:
      - gvl.filesystem
   tags: galaxyFS
