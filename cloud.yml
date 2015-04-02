@@ -8,14 +8,14 @@
 
 # To build the base image, use this role via the following command (make sure
 # you provided an instance IP in ``inventory/builders`` for
-# ``image-builder`` host group):
+# ``gvl-image-hosts`` host group):
 #
 #   % ansible-playbook -i inventory/builders cloud.yml --tags "machine-image"
 #     --extra-vars vnc_password=<make_up_a_pwd> [--extra-vars cleanup=yes]
 #
 # - hosts: localhost
 #   connection: local
-- hosts: image-builder
+- hosts: gvl-image-hosts
   # gather_facts: False  # Uncomment during dev only
   sudo: yes
   roles:
@@ -30,7 +30,7 @@
 #
 # - hosts: localhost
 #   connection: local
-- hosts: galaxyFS-builder
+- hosts: gvl-filesystem-hosts
   vars:
     gvl_version: 3.05 Alpha 2
     gvl_flavour:
