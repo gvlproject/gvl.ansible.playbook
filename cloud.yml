@@ -20,7 +20,7 @@
   sudo: yes
   roles:
     - gvl.image
-  tags: machine-image
+  tags: gv-image
 
 # To build the galaxyFS, use this role via the following command (make sure
 # you provided an instance IP in ``inventory/builders`` for
@@ -40,4 +40,4 @@
   gather_facts: False  # Not making system-level changes so skip
   roles:
      - gvl.filesystem
-  tags: galaxyFS
+  tags: gvl-fs
