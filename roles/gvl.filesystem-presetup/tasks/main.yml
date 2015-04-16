@@ -1,3 +1,9 @@
+- name: Update apt packages
+  apt: update_cache=yes
+
+- name: Install latest apt packages
+  apt: upgrade=dist
+
 - name: Assure galaxyFS dir exists
   file: path={{ galaxyFS_base_dir }} state=directory owner={{ galaxy_user_name }} group={{ galaxy_user_name }}
   sudo_user: root
