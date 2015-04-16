@@ -10,4 +10,4 @@ chdir {{ gvldash_path }}/gvldash
 env DJANGO_CONFIGURATION="Production"
 export DJANGO_CONFIGURATION
 
-exec {{ gvldash_path }}/.venv/bin/gunicorn wsgi:application
+exec {{ gvldash_path }}/.venv/bin/gunicorn -w 2 wsgi:application
