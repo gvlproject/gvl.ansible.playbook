@@ -32,6 +32,8 @@ galaxy_manage_trackster: yes
 len_file_path: "{{ galaxyFS_base_dir }}/configuration_data/len"
 bedtools_version: 2.20.1
 
+gvl_galaxy_brand: "GVL 3.05"
+
 galaxy_config:
   "server:main":
     port: "{{ galaxy_webserver_port }}"
@@ -80,7 +82,7 @@ galaxy_config:
     tool_sheds_config_file: "{{ galaxy_mutable_config_dir }}/tool_sheds_conf.xml.sample"
     builds_file_path: "{{ galaxy_config_dir }}/builds.txt"
 
-    brand: "GVL 3.05"
+    brand: "{{ gvl_galaxy_brand }}"
     support_url: https://genome.edu.au/wiki/GVL_Help
     ucsc_display_sites: gvlmain,test,archaea,ucla
     static_dir: "{{ galaxy_server_dir }}/static/"
