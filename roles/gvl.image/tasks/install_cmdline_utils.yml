@@ -1,0 +1,5 @@
+- name: GVL Utils - Copy gvl scripts
+  copy: src=scripts dest={{ gvl_script_path }} mode=0755 owner="ubuntu"
+
+- name: GVL Utils - Clone gvl_commandline_utilities
+  git: repo={{ gvl_cmdline_repository }} dest={{ gvl_cmdline_utils_path }} accept_hostkey=yes

@@ -5,7 +5,7 @@ then
     read -n 1 _input
     #printf "Please enter the name of the user you want to run ipython as - note: you must have already created this user: "
     #read username
-    sudo su - researcher -c "screen -d -m -S ipython /home/ubuntu/ipython_screen.sh"
+    sudo su - researcher -c "screen -d -m -S ipython /opt/gvl/scripts/cmdlineutils/ipython_screen.sh"
 else
     printf "\nYou need to run 'Set up GVL utilities' before adding a user\n\n"
 fi

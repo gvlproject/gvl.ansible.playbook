@@ -6,8 +6,8 @@ stop on runlevel [016]
 respawn
 setuid nobody
 setgid nogroup
-chdir {{ gvldash_path }}/gvldash
+chdir {{ gvl_dash_path }}/gvldash
 env DJANGO_CONFIGURATION="Production"
 export DJANGO_CONFIGURATION
 
-exec {{ gvldash_path }}/.venv/bin/gunicorn -w 2 wsgi:application
+exec {{ gvl_dash_path }}/.venv/bin/gunicorn -w 2 wsgi:application

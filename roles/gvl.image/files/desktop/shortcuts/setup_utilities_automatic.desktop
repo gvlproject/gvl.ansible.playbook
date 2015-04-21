@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=Set up GVL Utilities Automatic
 Comment=Run scripts to configure command-line utilities, RStudio, IPython Notebook
-Exec=lxterminal --command "/home/ubuntu/setup_utils_silent.sh"
+Exec=lxterminal --command "/opt/gvl/scripts/cmdlineutils/setup_utils_silent.sh"
 Icon=utilities-terminal-symbolic
 Terminal=false
 Type=Application

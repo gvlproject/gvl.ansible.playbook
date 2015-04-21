@@ -2,40 +2,40 @@
   group: name=webapps state=present
 
 - name: GVLDash - Create GVL web user
-  user: name={{ gvldash_webuser }} comment="GVL Web User" group=webapps shell=/bin/bash
+  user: name={{ gvl_dash_webuser }} comment="GVL Web User" group=webapps shell=/bin/bash
 
 - name: GVLDash - Create webapp directories
   file:
-    path: "{{ gvldash_path }}"
+    path: "{{ gvl_dash_path }}"
     state: 'directory'
-    owner: "{{ gvldash_webuser }}"
+    owner: "{{ gvl_dash_webuser }}"
     group: "webapps"
     mode: "0755"
 
 - name: GVLDash - Checkout application source
-  git: repo={{ gvldash_repository }} dest={{ gvldash_path }} accept_hostkey=yes
+  git: repo={{ gvl_dash_repository }} dest={{ gvl_dash_path }} accept_hostkey=yes
   sudo: true
-  sudo_user: "{{ gvldash_webuser }}"
+  sudo_user: "{{ gvl_dash_webuser }}"
 
 - name: GVLDash - Install requirements
-  pip: requirements={{ gvldash_path }}/requirements.txt virtualenv={{ gvldash_path }}/.venv state=latest
+  pip: requirements={{ gvl_dash_path }}/requirements.txt virtualenv={{ gvl_dash_path }}/.venv state=latest
   sudo: true
-  sudo_user: "{{ gvldash_webuser }}"
+  sudo_user: "{{ gvl_dash_webuser }}"
   tags:
     - install
     - deploy
 
 - name: GVLDash - Django collectstatic
-  django_manage: command=collectstatic app_path={{ gvldash_path }}/gvldash virtualenv={{ gvldash_path }}/.venv
+  django_manage: command=collectstatic app_path={{ gvl_dash_path }}/gvldash virtualenv={{ gvl_dash_path }}/.venv
   sudo: true
-  sudo_user: "{{ gvldash_webuser }}"
+  sudo_user: "{{ gvl_dash_webuser }}"
   tags:
     - install
     - deploy
 
 - name: GVLDash - Ensure nginx can access static path
   file:
-    path: '{{ gvldash_path }}/gvldash/static/'
+    path: '{{ gvl_dash_path }}/gvldash/static/'
     state: 'directory'
     group: 'www-data'
     mode: '0755'
@@ -44,4 +44,4 @@
   template: src=gvldash.j2 dest=/etc/init/gvldash.conf
 
 - name: GVLDash - Copy GVL version info file
-  template: src=version_info.j2 dest={{ gvldash_path }}/version_info.yml
+  template: src=version_info.j2 dest={{ gvl_dash_path }}/version_info.yml

@@ -41,10 +41,15 @@ vnc_depth: 16
 vnc_geometry: 1024x768
 
 # gvl setup details
+gvl_install_path: /opt/gvl
+gvl_script_path: {{ gvl_install_path }}/scripts
+gvl_cmdline_utils_path: {{ gvl_install_path }}/gvl_commandline_utilities
+gvl_cmdline_repository: https://github.com/gvlproject/gvl_commandline_utilities
+gvl_profile_path: /mnt/gvl
 gvl_install_dash: yes
-gvldash_path: /opt/gvldash
-gvldash_repository: https://bitbucket.org/gvl/gvldash
-gvldash_webuser: gvlwebuser
+gvl_dash_path: "{{ gvl_install_path }}/gvldash"
+gvl_dash_repository: https://bitbucket.org/gvl/gvldash
+gvl_dash_webuser: gvlwebuser
 
 gvl_version: 3.05 Alpha 2
 gvl_flavour:
