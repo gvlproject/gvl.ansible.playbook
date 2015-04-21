@@ -32,7 +32,7 @@
 #   connection: local
 - hosts: gvl-filesystem-hosts
   vars:
-    gvl_version: 3.05 Alpha 2
+    gvl_version: 3.05 Alpha 4
     gvl_flavour:
     gvl_build_date: "{{ ansible_date_time.iso8601 }}"
   sudo: yes
