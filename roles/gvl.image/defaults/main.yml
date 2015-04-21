@@ -42,8 +42,8 @@ vnc_geometry: 1024x768
 
 # gvl setup details
 gvl_install_path: /opt/gvl
-gvl_script_path: {{ gvl_install_path }}/scripts
-gvl_cmdline_utils_path: {{ gvl_install_path }}/gvl_commandline_utilities
+gvl_script_path: "{{ gvl_install_path }}/scripts"
+gvl_cmdline_utils_path: "{{ gvl_install_path }}/gvl_commandline_utilities"
 gvl_cmdline_repository: https://github.com/gvlproject/gvl_commandline_utilities
 gvl_profile_path: /mnt/gvl
 gvl_install_dash: yes
