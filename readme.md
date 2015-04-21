@@ -32,7 +32,7 @@ instance and set the instance IP address under `image-builder` host group in the
 commenting out `connection: local` line. Finally, run the role with
 
     ansible-galaxy install -r requirements_roles.txt -p roles
-    ansible-playbook -i inventory/builders cloud.yml --tags "machine-image" --extra-vars vnc_password=<choose a password> --extra-vars cleanup=yes
+    ansible-playbook -i inventory/builders cloud.yml --tags "gvl-image" --extra-vars vnc_password=<choose a password> --extra-vars cleanup=yes
 
 On average, the build time takes about 30 minutes. *Note that after the playbook
 has run to completion, you will no longer be able to ssh into the instance!* If
@@ -58,7 +58,7 @@ of `psql_galaxyftp_password` in `group_vars/all` and set the launched instance
 IP in `inventory/builders` under `galaxyFS-builder` host group and run the
 role with
 
-    ansible-playbook -i inventory/builders cloud.yml --tags "galaxyFS"
+    ansible-playbook -i inventory/builders cloud.yml --tags "gvl-fs"
 
 You may want to customise the list of tools that are installed prior to running the command above.
 This can be done by editing shed_tool_list.yaml.gvl. You may also want to update the default container

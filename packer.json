@@ -77,7 +77,7 @@
        "--extra-vars",
        "psql_galaxyftp_password='{{user `gftp_pwd`}}'",
        "--tags",
-       "machine-image",
+       "gvl-image",
        "--extra-vars",
        "cleanup=no"
     ]
@@ -101,7 +101,7 @@
        "--extra-vars",
        "psql_galaxyftp_password='{{user `gftp_pwd`}}'",
        "--tags",
-       "galaxyFS"
+       "gvl-fs"
     ]
   },
   {
