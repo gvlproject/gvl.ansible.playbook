@@ -1,0 +1,53 @@
+        # GVL location overrides
+
+        location / {
+        	# this prevents a deadlock when gvldash gunicorn workers make a request to localhost
+        	deny 127.0.0.1;
+            proxy_pass  http://gvl_app;
+            proxy_set_header   X-Forwarded-Host $$host;
+            proxy_set_header   X-Forwarded-For  $$proxy_add_x_forwarded_for;
+            proxy_set_header   Host  $$host;
+        }
+
+        location /api {
+        	# But the /api should be callable from localhost however
+        	allow 127.0.0.1;
+            proxy_pass  http://gvl_app;
+            proxy_set_header   X-Forwarded-Host $$host;
+            proxy_set_header   X-Forwarded-For  $$proxy_add_x_forwarded_for;
+            proxy_set_header   Host  $$host;
+        }
+
+        location /static {
+            alias {{ gvl_dash_path }}/gvldash/static;
+            expires 24h;
+        }
+
+        location /galaxy {
+            proxy_pass  http://galaxy_app;
+            proxy_set_header   X-Forwarded-Host $$host;
+            proxy_set_header   X-Forwarded-For  $$proxy_add_x_forwarded_for;
+        }
+
+        location /galaxy/static {
+            alias $galaxy_home/static;
+            expires 24h;
+        }
+
+        location /galaxy/static/style {
+            alias $galaxy_home/static/june_2007_style/blue;
+            expires 24h;
+        }
+
+        location /galaxy/static/scripts {
+            alias $galaxy_home/static/scripts/packed;
+            expires 24h;
+        }
+
+        location /_upload_done {
+            set $$dst /galaxy/api/tools;
+            if ($$args ~ nginx_redir=([^&]+)) {
+                set $$dst $$1;
+            }
+            rewrite "" $$dst;
+        }
