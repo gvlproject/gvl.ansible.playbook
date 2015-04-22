@@ -4,8 +4,10 @@
 - name: Copy the GVL nginx conf overrides
   template: src={{ item.src }} dest="/etc/nginx/sites-enabled/{{ item.dest }}"
   with_items:
-  - { src: "nginx_gvl_server.j2", dest: "00_nginx_gvl.server" }
-  - { src: "nginx_gvl_locations.j2", dest: "00_nginx_gvl.locations" }
+  - src: nginx_gvl_server.j2
+    dest: "00_nginx_gvl.server"
+  - src: nginx_gvl_locations.j2
+    dest: "00_nginx_gvl.locations"
 
 - name: Reload nginx config
   service: name=nginx state=reloaded
