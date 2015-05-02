@@ -1,3 +1,6 @@
+- name: GVL Utils - Configure the GVL init script to run as an upstart job
+  template: src=gvlinit.j2 dest=/etc/init/gvlinit.conf
+
 - name: GVL Utils - Copy gvl scripts
   copy: src=scripts dest={{ gvl_install_path }} mode=0755 owner="ubuntu"
 

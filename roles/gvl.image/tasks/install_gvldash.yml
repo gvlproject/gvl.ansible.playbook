@@ -43,5 +43,11 @@
 - name: GVLDash - Configure gvldash to run an upstart job
   template: src=gvldash.j2 dest=/etc/init/gvldash.conf
 
+- name: GVLDash - Create GVL version info folder
+  file:
+    path: '{{ gvl_install_path }}/info/'
+    state: 'directory'
+    mode: '0755'
+
 - name: GVLDash - Copy GVL version info file
-  template: src=version_info.j2 dest={{ gvl_dash_path }}/version_info.yml
+  template: src=version_info.j2 dest={{ gvl_install_path }}/info/image.yml
