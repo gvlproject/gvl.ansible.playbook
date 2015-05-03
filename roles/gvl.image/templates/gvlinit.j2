@@ -3,8 +3,6 @@ description "gvlinit"
 # the following line ensures that this script starts before gvldash
 start on (starting gvldash)
 
-chdir {{ gvl_runtime_path }}
-
 script
 	mkdir {{ gvl_runtime_path }}
 	chown ubuntu:ubuntu {{ gvl_runtime_path }}
