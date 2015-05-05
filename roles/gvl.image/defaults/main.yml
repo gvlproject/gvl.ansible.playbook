@@ -45,7 +45,7 @@ gvl_install_path: /opt/gvl
 gvl_script_path: "{{ gvl_install_path }}/scripts"
 gvl_cmdline_utils_path: "{{ gvl_install_path }}/gvl_commandline_utilities"
 gvl_cmdline_repository: https://github.com/gvlproject/gvl_commandline_utilities
-gvl_runtime_path: /mnt/gvl
+gvl_user_home_dir: /mnt/gvl/home
 gvl_install_dash: yes
 gvl_dash_path: "{{ gvl_install_path }}/gvldash"
 gvl_dash_repository: https://bitbucket.org/gvl/gvldash

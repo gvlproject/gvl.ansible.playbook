@@ -6,3 +6,11 @@
 
 - name: GVL Utils - Clone gvl_commandline_utilities
   git: repo={{ gvl_cmdline_repository }} dest={{ gvl_cmdline_utils_path }} accept_hostkey=yes
+
+- name: GVL Utils - Set ownership of git folder to ubuntu
+  file:
+    path: '{{ gvl_cmdline_utils_path }}'
+    state: 'directory'
+    owner: 'ubuntu'
+    group: 'ubuntu'
+    recurse: yes

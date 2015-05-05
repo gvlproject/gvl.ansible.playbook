@@ -4,8 +4,6 @@ description "gvlinit"
 start on (starting gvldash)
 
 script
-	mkdir {{ gvl_runtime_path }}
-	chown ubuntu:ubuntu {{ gvl_runtime_path }}
 	# use run-parts to execute all scripts in directory
 	# from: http://www.cyberciti.biz/tips/running-all-unix-linux-scripts-in-directory.html
 	run-parts {{ gvl_script_path }}/start.d/
