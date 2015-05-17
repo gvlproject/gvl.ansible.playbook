@@ -34,7 +34,8 @@ galaxy_manage_trackster: yes
 len_file_path: "{{ galaxyFS_base_dir }}/configuration_data/len"
 bedtools_version: 2.20.1
 
-gvl_galaxy_brand: "GVL 3.05"
+gvl_version: "4.00"
+gvl_galaxy_brand: "GVL {{ gvl_version }}"
 
 galaxy_config:
   "server:main":
@@ -138,7 +139,7 @@ pulsar_optional_dependencies:
 
 # gvl setup details
 galaxy_git_repo: https://github.com/gvlproject/galaxy
-galaxy_changeset_id: gvl_4.00
+galaxy_changeset_id: gvl_{{ gvl_version }}
 galaxy_webserver_port: 8080
 galaxy_archive_path: /tmp/galaxy_archive
 galaxy_admin_user_password: "TODO-GenerateRandomOrDeleteBootstrapUser"

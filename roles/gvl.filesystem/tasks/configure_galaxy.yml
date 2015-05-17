@@ -1,12 +1,4 @@
 - name: GVL Galaxy - Set genomespace urls to point to GVL versions
-  lineinfile: dest="{{ galaxy_archive_path }}" owner={{ galaxy_user_name }} group={{ galaxy_user_name }} state=directory
-  with_items:
-    - tools/data_source/ucsc_tablebrowser.xml
-    - tools/genomespace/genomespace_exporter.py
-    - tools/genomespace/genomespace_file_browser.py
-    - tools/genomespace/genomespace_importer.py
-
-- name: GVL Galaxy - Set genomespace urls to point to GVL versions
   replace: dest="{{ galaxy_server_dir }}/{{ item }}" regexp="dm.genomespace.org" replace="{{ gvl_genomespace_server }}"
   with_items:
     - tools/genomespace/genomespace_exporter.py
