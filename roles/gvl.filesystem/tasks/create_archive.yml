@@ -11,26 +11,26 @@
   ignore_errors: yes
 
 - name: GVL Galaxy - Create galaxy archive target directory
-  file: dest="{{ galaxy_archive_path }}" owner={{ galaxy_user_name }} group={{ galaxy_user_name }} state=directory
+  file: dest="{{ gvl_fs_archive_path }}" owner={{ galaxy_user_name }} group={{ galaxy_user_name }} state=directory
 
 - name: GVL Galaxy - Install openstack swift packages
-  pip: name={{ item }} virtualenv="{{ galaxy_archive_path }}/venv"
+  pip: name={{ item }} virtualenv="{{ gvl_fs_archive_path }}/venv"
   with_items:
     - python-swiftclient
     - python-keystoneclient
 
 - name: GVL Galaxy - Remove existing archive
-  file: dest="{{ galaxy_archive_path }}/{{ galaxy_archive_name }}" state=absent
+  file: dest="{{ gvl_fs_archive_path }}/{{ gvl_fs_archive_name }}" state=absent
   sudo: yes
   sudo_user: root
 
 - name: GVL Galaxy - Create new filesystem archive
-  command: chdir={{ galaxyFS_base_dir }} tar -czf {{ galaxy_archive_path }}/{{ galaxy_archive_name }} -C {{ galaxyFS_base_dir }} .
+  command: chdir={{ galaxyFS_base_dir }} tar -czf {{ gvl_fs_archive_path }}/{{ gvl_fs_archive_name }} -C {{ galaxyFS_base_dir }} .
   sudo: yes
   sudo_user: root
 
 - name: GVL Galaxy - Upload filesystem archive
-  command: chdir={{ galaxy_archive_path }} {{ galaxy_archive_path }}/venv/bin/swift upload {{ cloudman_bucket_name }} {{ galaxy_archive_name }}
+  command: chdir={{ gvl_fs_archive_path }} {{ gvl_fs_archive_path }}/venv/bin/swift upload {{ cloudman_bucket_name }} {{ gvl_fs_archive_name }}
   sudo: yes
   sudo_user: root
   environment:
