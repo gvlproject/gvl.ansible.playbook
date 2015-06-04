@@ -34,7 +34,11 @@ galaxy_manage_trackster: yes
 len_file_path: "{{ galaxyFS_base_dir }}/configuration_data/len"
 bedtools_version: 2.20.1
 
+gvl_fs_name: "GVL FileSystem"
+gvl_fs_flavour: default
+gvl_fs_build_date: "{{ ansible_date_time.iso8601 }}"
 gvl_version: "4.00"
+gvl_fs_version: {{ gvl_version }}
 gvl_galaxy_brand: "GVL {{ gvl_version }}"
 
 galaxy_config:
@@ -148,7 +152,7 @@ gvl_create_archive: False
 # cloudman_bucket_name: cm-ng-dev
 gvl_fs_archive_name: "gvl-galaxyfs-{{ gvl_version }}.tar.gz"
 gvl_fs_archive_path: /tmp/galaxy_archive
-# OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
+OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
 # OS_TENANT_ID:
 # OS_TENANT_NAME:
 # OS_USERNAME:

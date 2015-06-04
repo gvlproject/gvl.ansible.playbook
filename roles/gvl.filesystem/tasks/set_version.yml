@@ -1,0 +1,24 @@
+- name: Create GVL filesystem folder
+  file:
+    path: '{{ galaxyFS_base_dir }}/gvl/'
+    state: 'directory'
+    mode: '0755'
+
+- name: Create GVL script folder
+  file:
+    path: '{{ galaxyFS_base_dir }}/gvl/poststart.d'
+    state: 'directory'
+    mode: '0755'
+
+- name: Create GVL version info folder
+  file:
+    path: '{{ galaxyFS_base_dir }}/gvl/info'
+    state: 'directory'
+    mode: '0755'
+
+- name: GVL FS - Copy GVL filesystem version info file
+  template: src=version_info.j2 dest={{ galaxyFS_base_dir }}/gvl/info/filesystem.yml
+
+- name: GVL FS - Copy GVL filesystem poststart scripts
+  copy: src=scripts/poststart.d/ dest={{ galaxyFS_base_dir }}/gvl/poststart.d/ mode=0755 owner="ubuntu"
+

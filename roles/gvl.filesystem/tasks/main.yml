@@ -1,6 +1,7 @@
 - include: configure_galaxy.yml
   when: cm_setup_galaxy
 
+- include: set_version.yml
+
 - include: create_archive.yml
   when: gvl_create_archive
-

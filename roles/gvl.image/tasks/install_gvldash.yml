@@ -49,5 +49,5 @@
     state: 'directory'
     mode: '0755'
 
-- name: GVLDash - Copy GVL version info file
+- name: GVLDash - Copy GVL image version info file
   template: src=version_info.j2 dest={{ gvl_install_path }}/info/image.yml
