@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -X PUT --data '{ "event":"post_start_event" }' http://127.0.0.1/api/v1/system/status/events
