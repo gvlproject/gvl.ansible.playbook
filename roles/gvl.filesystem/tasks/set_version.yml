@@ -21,4 +21,5 @@
 
 - name: GVL FS - Copy GVL filesystem poststart scripts
   copy: src=scripts/poststart.d/ dest={{ galaxyFS_base_dir }}/gvl/poststart.d/ mode=0755 owner="ubuntu"
-
+  sudo: yes
+  sudo_user: root
