@@ -33,7 +33,7 @@
 - hosts: gvl-filesystem-hosts
   sudo: yes
   sudo_user: galaxy
-  gather_facts: False  # Not making system-level changes so skip
+#   gather_facts: False  # Not making system-level changes so skip
   roles:
      - gvl.filesystem
   tags: gvl-fs
