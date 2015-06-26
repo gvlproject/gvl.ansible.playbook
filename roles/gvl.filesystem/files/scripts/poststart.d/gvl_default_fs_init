@@ -1,2 +1,2 @@
 #!/bin/bash
-cp `basename $0`/../info/filesystem.yml /opt/gvl/info
+cp ../info/filesystem.yml /opt/gvl/info
