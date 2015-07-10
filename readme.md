@@ -80,7 +80,7 @@ roles in the playbook are stored in `group_vars/all`.
 
 [ansible]: http://www.ansible.com/
 [GVL]: http://genome.edu.au/
-[cloudman]: http://usecloudman.org/
+[cloudman]: https://github.com/galaxyproject/galaxy-cloudman-playbook/
 [goc]: https://wiki.galaxyproject.org/Cloud
 [gp]: http://galaxyproject.org/
 [building]: https://wiki.galaxyproject.org/CloudMan/Building
