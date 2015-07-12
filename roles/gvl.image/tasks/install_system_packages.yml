@@ -9,3 +9,8 @@
   with_items:
     - screen
     - environment-modules
+
+- name: Ensure apt version of ansible is uninstalled
+  apt: pkg={{ item }} state=absent
+  with_items:
+    - ansible
