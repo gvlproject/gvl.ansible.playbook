@@ -11,6 +11,7 @@
     - environment-modules
 
 - name: Ensure apt version of ansible is uninstalled
-  apt: pkg={{ item }} state=absent
-  with_items:
-    - ansible
+  apt: pkg=ansible state=absent
+
+- name: Ensure pip version of ansible is uninstalled
+  pip: name=ansible state=latest
