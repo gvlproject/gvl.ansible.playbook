@@ -3,8 +3,8 @@ This [Ansible][ansible] playbook is used to build the components required to run
 is heavily reliant on the [Galaxy CloudMan playbook][cloudman] and is intended 
 for anyone wanting to deploy a customised version of the GVL on a public or 
 private cloud. The overall process for building the GVL follows very closely 
-the one for building Galaxy on the Cloud and hence it is recommended to also 
-read [this page][building] that describes the high-level details of the build 
+the one for building *Galaxy on the Cloud* and hence it is recommended to first 
+read [this page][building] that describes the high-level concepts of the build 
 process - just use this playbook instead of the one mentioned in that document.
 
 There are several roles contained in this playbook; the roles manage
@@ -54,23 +54,18 @@ Common variables for all the roles in the playbook are stored in `group_vars/all
 
 GVL File System (GVL-FS)
 -----------------------------
-Launch an instance of the machine image built in the previous step and attach a
-new volume to it. Create a (`XFS`) file system on that volume and mount it
-(under `/mnt/galaxy`). Note that this can also be done from CloudMan's
-Admin page by adding a new-volume-based file system. Change the value
-of `psql_galaxyftp_password` in `group_vars/all` and set the launched instance
-IP in `inventory/builders` under `galaxyFS-builder` host group and run the
-role with
+Launch an instance of the machine image built in the previous step and when 
+CloudMan comes up, choose the *Cluster only* with *transient storage* option 
+(under *Additional startup options*). Insert the instance IP address in
+`inventory/builders` file under `galaxyFS-builder` host group and change the value
+of `psql_galaxyftp_password` in `group_vars/all`; run the role with
 
     ansible-playbook -i inventory/builders cloud.yml --tags "gvl-fs"
 
-You may want to customise the list of tools that are installed prior to running the command above.
-This can be done by editing `shed_tool_list.yaml.gvl`. You may also want to update the default container
+Running above command will automatically install a number of Galaxy tools. The list of
+tools that can be installed can be changed by editing `shed_tool_list.yaml.gvl`. 
+You may also want to update the default container
 to which the GVL filesystem archive will be uploaded (in `group_vars/galaxyFS-builder.yml`)
-
-After the run has completed (typically ~15 minutes), you need to create a snapshot of the file
-system. Before doing so, stop any services that might still be using the file
-system, unmount the file system and create a snapshot of it from the Cloud's console.
 
 ### Customizing
 This role requires a number of configuration options for the Galaxy application,
