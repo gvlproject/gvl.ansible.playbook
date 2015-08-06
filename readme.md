@@ -1,16 +1,20 @@
 This [Ansible][ansible] playbook is used to build the components required to run
 [The Genomics Virtual Laboratory (GVL)][GVL]. The playbook
-is heavily reliant on the [Cloudman][cloudman] playbook and is intended for anyone
-wanting to deploy a customised version of the GVL on a public or private cloud.
+is heavily reliant on the [Galaxy CloudMan playbook][cloudman] and is intended 
+for anyone wanting to deploy a customised version of the GVL on a public or 
+private cloud. The overall process for building the GVL follows very closely 
+the one for building Galaxy on the Cloud and hence it is recommended to also 
+read [this page][building] that describes the high-level details of the build 
+process - just use this playbook instead of the one mentioned in that document.
 
 There are several roles contained in this playbook; the roles manage
 the build process of different components:
 
-  **GVL-Image**: Installs components required for a GVL image snapshot. Implements only the differences from a base cloudman image.
+  **GVL-Image**: Installs components required for a GVL image snapshot. Implements 
+  only the differences from a base CloudMan image.
 
-  **GVL-FS**: Installs components required for a GVL filesystem snapshot. Implements only the differences from a base cloudman filesystem.
-
-The build instructions are identical to cloudman's build instructions, which can be found  [here][building].
+  **GVL-FS**: Installs components required for a GVL filesystem snapshot. 
+  Implements only the differences from a base CloudMan filesystem.
 
 These roles are intended to be run on an Ubuntu (14.04) system.
 
@@ -61,8 +65,8 @@ role with
     ansible-playbook -i inventory/builders cloud.yml --tags "gvl-fs"
 
 You may want to customise the list of tools that are installed prior to running the command above.
-This can be done by editing shed_tool_list.yaml.gvl. You may also want to update the default container
-to which the GVL filesystem archive will be uploaded (in group_vars/galaxyFS-builder.yml)
+This can be done by editing `shed_tool_list.yaml.gvl`. You may also want to update the default container
+to which the GVL filesystem archive will be uploaded (in `group_vars/galaxyFS-builder.yml`)
 
 After the run has completed (typically ~15 minutes), you need to create a snapshot of the file
 system. Before doing so, stop any services that might still be using the file
