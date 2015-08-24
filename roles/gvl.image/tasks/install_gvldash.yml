@@ -51,3 +51,7 @@
 
 - name: GVLDash - Copy GVL image version info file
   template: src=version_info.j2 dest={{ gvl_install_path }}/info/image.yml
+
+- name: GVLDash - Make sure service starts
+  service: name=gvldash state=started
+
