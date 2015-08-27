@@ -17,5 +17,5 @@
 - name: Ensure apt version of ansible is uninstalled
   apt: pkg=ansible state=absent
 
-- name: Ensure pip version of ansible is uninstalled
+- name: Ensure pip version of ansible is installed
   pip: name=ansible state=latest
