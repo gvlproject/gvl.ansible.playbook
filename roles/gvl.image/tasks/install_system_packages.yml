@@ -1,3 +1,6 @@
+- name: Install ppa for latest git
+  apt_repository: repo='ppa:git-core/ppa' state=present
+
 - name: Update apt packages
   apt: update_cache=yes
 
@@ -7,6 +10,7 @@
 - name: Install required system packages
   apt: pkg={{ item }} state=latest
   with_items:
+    - git
     - screen
     - environment-modules
 
