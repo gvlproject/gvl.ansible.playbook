@@ -59,4 +59,4 @@
   wait_for: port=8000 delay=5 state=started timeout=150
 
 - name: GVLDash - Stop the service
-  service: name=gvldash state=started
+  service: name=gvldash state=stopped
