@@ -52,6 +52,11 @@
 - name: GVLDash - Copy GVL image version info file
   template: src=version_info.j2 dest={{ gvl_install_path }}/info/image.yml
 
-- name: GVLDash - Make sure service starts
+- name: GVLDash - Start the service
   service: name=gvldash state=started
 
+- name: GVLDash - Make sure the service starts up correctly
+  wait_for: port=8000 delay=5 state=started timeout=150
+
+- name: GVLDash - Stop the service
+  service: name=gvldash state=started
