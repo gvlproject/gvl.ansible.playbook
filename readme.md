@@ -1,19 +1,19 @@
 This [Ansible][ansible] playbook is used to build the components required to run
 [The Genomics Virtual Laboratory (GVL)][GVL]. The playbook
-is heavily reliant on the [Galaxy CloudMan playbook][cloudman] and is intended 
-for anyone wanting to deploy a customised version of the GVL on a public or 
-private cloud. The overall process for building the GVL follows very closely 
-the one for building *Galaxy on the Cloud* and hence it is recommended to first 
-read [this page][building] that describes the high-level concepts of the build 
+is heavily reliant on the [Galaxy CloudMan playbook][cloudman] and is intended
+for anyone wanting to deploy a customised version of the GVL on a public or
+private cloud. The overall process for building the GVL follows very closely
+the one for building *Galaxy on the Cloud* and hence it is recommended to first
+read [this page][building] that describes the high-level concepts of the build
 process - just use this playbook instead of the one mentioned in that document.
 
 There are several roles contained in this playbook; the roles manage
 the build process of different components:
 
-  **GVL-Image**: Installs components required for a GVL image snapshot. Implements 
+  **GVL-Image**: Installs components required for a GVL image snapshot. Implements
   only the differences from a base CloudMan image.
 
-  **GVL-FS**: Installs components required for a GVL filesystem snapshot. 
+  **GVL-FS**: Installs components required for a GVL filesystem snapshot.
   Implements only the differences from a base CloudMan filesystem.
 
 These roles are intended to be run on an Ubuntu (14.04) system.
@@ -36,7 +36,7 @@ instance and set the instance IP address under `image-builder` host group in the
 commenting out `connection: local` line. Finally, run the role with
 
     ansible-galaxy install -r requirements_roles.txt -p roles
-    ansible-playbook -i inventory/builders cloud.yml --tags "gvl-image" --extra-vars vnc_password=<choose a password> --extra-vars cleanup=yes
+    ansible-playbook -i inventory/builders cloud.yml --tags "gvl-image" --extra-vars vnc_password=<choose a password> --extra-vars psql_galaxyftp_password=<choose a password> --extra-vars cleanup=yes
 
 On average, the build time takes about 30 minutes. *Note that after the playbook
 has run to completion, you will no longer be able to ssh into the instance!* If
@@ -54,8 +54,8 @@ Common variables for all the roles in the playbook are stored in `group_vars/all
 
 GVL File System (GVL-FS)
 -----------------------------
-Launch an instance of the machine image built in the previous step and when 
-CloudMan comes up, choose the *Cluster only* with *transient storage* option 
+Launch an instance of the machine image built in the previous step and when
+CloudMan comes up, choose the *Cluster only* with *transient storage* option
 (under *Additional startup options*). Insert the instance IP address in
 `inventory/builders` file under `galaxyFS-builder` host group and change the value
 of `psql_galaxyftp_password` in `group_vars/all`; run the role with
@@ -63,7 +63,7 @@ of `psql_galaxyftp_password` in `group_vars/all`; run the role with
     ansible-playbook -i inventory/builders cloud.yml --tags "gvl-fs"
 
 Running above command will automatically install a number of Galaxy tools. The list of
-tools that can be installed can be changed by editing `shed_tool_list.yaml.gvl`. 
+tools that can be installed can be changed by editing `shed_tool_list.yaml.gvl`.
 You may also want to update the default container
 to which the GVL filesystem archive will be uploaded (in `group_vars/galaxyFS-builder.yml`)
 
