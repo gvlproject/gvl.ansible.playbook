@@ -5,3 +5,4 @@ galaxyprojectdotorg.cloudman-database
 galaxyprojectdotorg.trackster
 galaxyprojectdotorg.galaxy
 galaxyprojectdotorg.cloudman-galaxy-setup
+galaxyprojectdotorg.galaxy-tools

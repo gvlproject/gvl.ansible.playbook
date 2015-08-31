@@ -10,6 +10,14 @@
   sudo_user: postgres
   ignore_errors: yes
 
+- name: Delete Galaxy log files
+  shell: rm -f {{ galaxy_server_dir }}/*.log*
+  ignore_errors: true
+
+- name: Clear out Galaxy's tmp folder
+  shell: rm -rf {{ galaxyFS_base_dir }}/tmp/*
+  ignore_errors: true
+
 - name: GVL Galaxy - Create galaxy archive target directory
   file: dest="{{ gvl_fs_archive_path }}" owner={{ galaxy_user_name }} group={{ galaxy_user_name }} state=directory
 
@@ -39,3 +47,12 @@
      OS_TENANT_NAME: "{{ OS_TENANT_NAME }}"
      OS_USERNAME: "{{ OS_USERNAME }}"
      OS_PASSWORD: "{{ OS_PASSWORD }}"
+
+- name: Get the archive MD5 sum
+  shell: "md5sum {{ gvl_fs_archive_path }}/{{ gvl_fs_archive_name }} | cut -f 1 -d' '"
+  register: md5
+  ignore_errors: true
+
+# Display MD5 sum for the created archive
+- debug: msg="{{ md5.stdout }}"
+  ignore_errors: true
