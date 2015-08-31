@@ -4,7 +4,7 @@
     "aws_secret_key": "{{env `AWS_SECRET_KEY`}}",
     "vnc_pwd": "{{env `CM_VNC_PWD`}}",
     "gftp_pwd": "{{env `CM_GALAXY_FTP_PWD`}}",
-    "image_name": "GVL 3.05 Image {{timestamp}}",
+    "image_name": "GVL 4.0.0 Image {{timestamp}}",
     "source_ami": "ami-b1eb9e8b",
     "instance_type": "m1.medium",
     "os_source_image": "d57696ba-5ed2-43fe-bf78-a587829973a9",
