@@ -163,3 +163,5 @@ OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
 cmg_extra_files:
   - src: roles/gvl.filesystem/files/galaxy-app
     dest: "{{ galaxyFS_base_dir }}"
+  - src: roles/gvl.filesystem/files/galaxy-var/
+    dest: "{{ galaxyFS_base_dir }}/var/"
