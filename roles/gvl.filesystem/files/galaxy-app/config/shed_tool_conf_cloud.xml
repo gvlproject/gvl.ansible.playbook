@@ -1,5 +1,29 @@
 <?xml version="1.0"?>
 <toolbox tool_path="../shed_tools">
+  <label text="Basic Tools" id="basic_tools" />
+  <section id="getext" name="Get Data">
+  </section>
+  <section id="send" name="Send Data">
+  </section>
+  <section id="liftOver" name="Lift-Over">
+  </section>
+  <section id="textutil" name="Text Manipulation">
+  </section>
+  <section id="filter" name="Filter and Sort">
+  </section>
+  <section id="group" name="Join, Subtract and Group">
+  </section>
+  <section id="convert" name="Convert Formats">
+  </section>
+  <section id="features" name="Extract Features">
+  </section>
+  <section id="fetchSeq" name="Fetch Sequences">
+  </section>
+  <section id="fetchAlign" name="Fetch Alignments">
+  </section>
+  <label text="Statistics and Visualisation" id="statistics_and_visualisation" />
+  <section id="stats" name="Statistics">
+  </section>
   <section id="plots" name="Graph/Display Data">
   </section>
   <label id="ngs_common_toolsets" text="NGS Common Toolsets" />
@@ -35,6 +59,8 @@
   <section id="snpeff" name="snpEff">
   </section>
   <section id="emboss" name="EMBOSS">
+  </section>
+  <section id="blast+" name="Blast +">
   </section>
   <section id="bed_tools" name="BED tools">
   </section>

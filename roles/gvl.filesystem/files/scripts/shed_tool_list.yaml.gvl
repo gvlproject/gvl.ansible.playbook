@@ -84,57 +84,57 @@ tools:
 - name: ncbi_blast_plus
   owner: devteam
   revision: c16c30e9ad5b
-  tool_panel_section_id: ngs-rna-tools
+  tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: cuffdiff
   owner: devteam
   revision: 4e6f043995ff
-  tool_panel_section_id: ngs-rna-tools
+  tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: cuffquant
   owner: devteam
   revision: 5d8b9dcaf17d
-  tool_panel_section_id: ngs-rna-tools
+  tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: cuffnorm
   owner: devteam
   revision: a26af05ac218
-  tool_panel_section_id: ngs-rna-tools
+  tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: tophat2
   owner: devteam
   revision: 5c5517d2a9e9
-  tool_panel_section_id: ngs-rna-tools
+  tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: tophat_fusion_post
   owner: devteam
   revision: f83394a2c2da
-  tool_panel_section_id: ngs-rna-tools
+  tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: cuffmerge
   owner: devteam
   revision: b6e3849293b1
-  tool_panel_section_id: ngs-rna-tools
+  tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: cuffcompare
   owner: devteam
   revision: 8e534225baa9
-  tool_panel_section_id: ngs-rna-tools
+  tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: cufflinks
   owner: devteam
   revision: 64698e16f4a6
-  tool_panel_section_id: ngs-rna-tools
+  tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: filter_transcripts_via_tracking
   owner: devteam
   revision: 31154ff9f5e1
-  tool_panel_section_id: ngs-rna-tools
+  tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: express
   owner: devteam
   revision: 7b0708761d05
-  tool_panel_section_id: ngs-rna-tools
+  tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: samtools_mpileup
   owner: devteam
@@ -954,77 +954,77 @@ tools:
 - name: fastq_trimmer_by_quality
   owner: devteam
   revision: 1cdcaf5fc1da
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_to_tabular
   owner: devteam
   revision: bc9269529e88
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_filter
   owner: devteam
   revision: 30d9ece6c752
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_combiner
   owner: devteam
   revision: 94306bdd58f7
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_paired_end_deinterlacer
   owner: devteam
   revision: f0949bc49926
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_groomer
   owner: devteam
   revision: 1298445c852b
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_manipulation
   owner: devteam
   revision: 5d1e9e13e8db
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_paired_end_interlacer
   owner: devteam
   revision: b89bdf6acb6c
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_paired_end_splitter
   owner: devteam
   revision: c549e99026db
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastqtofasta
   owner: devteam
   revision: 3571553aeb20
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_masker_by_quality
   owner: devteam
   revision: 5a7b5751617b
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_paired_end_joiner
   owner: devteam
   revision: 270a8ed8a300
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_stats
   owner: devteam
   revision: 9b7b4e0ca9db
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_trimmer
   owner: devteam
   revision: 0b9feb0ed628
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastqc
   owner: iuc
   revision: 2611a96c30b7
-  tool_panel_section_id: NGS_QC
+  tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: indels_3way
   owner: devteam
@@ -1045,4 +1045,28 @@ tools:
   owner: devteam
   revision: 4f33ec73e445
   tool_panel_section_id: multiple_regression
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: data_manager_fetch_genome_dbkeys_all_fasta
+  owner: devteam
+  tool_panel_section_id: getext
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: data_manager_bwa_index_builder
+  owner: devteam
+  tool_panel_section_id: getext
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: data_manager_bowtie2_index_builder
+  owner: devteam
+  tool_panel_section_id: getext
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: data_manager_gatk_picard_index_builder
+  owner: devteam
+  tool_panel_section_id: getext
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: data_manager_sam_fasta_index_builder
+  owner: devteam
+  tool_panel_section_id: getext
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: data_manager_snpeff
+  owner: devteam
+  tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
