@@ -5,3 +5,8 @@
     - tools/genomespace/genomespace_file_browser.py
     - tools/genomespace/genomespace_importer.py
     - tools/genomespace/genomespace_file_browser_prod.xml
+
+- name: GVL Galaxy - Set genomespace openid config to point to GVL Genomspace server
+  replace: dest="{{ galaxy_server_dir }}/{{ item }}" regexp="identity.genomespace.org" replace="{{ gvl_genomespace_server }}"
+  with_items:
+    - openid/genomespace.xml
