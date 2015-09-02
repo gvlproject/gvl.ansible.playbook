@@ -4,3 +4,4 @@
     - tools/genomespace/genomespace_exporter.py
     - tools/genomespace/genomespace_file_browser.py
     - tools/genomespace/genomespace_importer.py
+    - tools/genomespace/genomespace_file_browser_prod.xml
