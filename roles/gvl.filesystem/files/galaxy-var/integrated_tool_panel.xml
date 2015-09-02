@@ -13,6 +13,7 @@
     via its API - but if changes are necessary (such as to hide a tool or re-assign
     its section) modify that file and restart Galaxy.
     -->
+    <label id="basic_tools" text="Basic Tools" version="" />
     <section id="getext" name="Get Data" version="">
     </section>
     <section id="send" name="Send Data" version="">
@@ -27,8 +28,11 @@
     </section>
     <section id="convert" name="Convert Formats" version="">
     </section>
+    <section id="bxops" name="Operate on Genomic Intervals" version="">
+    </section>
     <section id="features" name="Extract Features" version="">
     </section>
+    <label id="statistics_and_visualisation" text="Statistics and Visualisation" version="" />
     <section id="fetchSeq" name="Fetch Sequences" version="">
     </section>
     <section id="fetchAlign" name="Fetch Alignments" version="">
@@ -37,50 +41,52 @@
     </section>
     <section id="plots" name="Graph/Display Data" version="">
     </section>
+    <label id="ngs_common_toolsets" text="NGS Common Toolsets" version="" />
     <section id="fasta_manipulation" name="FASTA manipulation" version="">
     </section>
-    <section id="ngs_assembly" name="NGS: Assembly" version="">
+    <section id="ngs_picard" name="NGS: Picard" version="">
     </section>
-    <section id="ngs_annotation" name="NGS: Annotation" version="">
+    <section id="samtools" name="NGS: SAM Tools" version="">
+    </section>
+    <section id="bed_tools" name="BED tools" version="">
+    </section>
+    <section id="ngs_vcf_tools" name="NGS: VCF Manipulation" version="">
     </section>
     <section id="gatk" name="NGS: GATK Tools" version="">
     </section>
     <section id="gatk2" name="NGS: GATK2" version="">
     </section>
-    <section id="ngs_mapping" name="NGS: Mapping" version="">
-    </section>
-    <section id="peak_calling" name="NGS: Peak Calling" version="">
-    </section>
-    <section id="ngs_picard" name="NGS: Picard" version="">
-    </section>
-    <section id="ngs_qc" name="NGS: QC and manipulation" version="">
-    </section>
-    <section id="ngs_rna_tools" name="NGS: RNA Analysis" version="">
-    </section>
-    <section id="samtools" name="NGS: SAM Tools" version="">
-    </section>
-    <section id="ngs_vcf_tools" name="NGS: VCF Manipulation" version="">
-    </section>
-    <section id="ngs_variant_detection" name="NGS: Variant Detection" version="">
-    </section>
-    <section id="ngs_variant_analysis" name="NGS: Variant Analysis" version="">
-    </section>
-    <section id="snpeff" name="snpEff" version="">
-    </section>
     <section id="emboss" name="EMBOSS" version="">
     </section>
-    <section id="bed_tools" name="BED tools" version="">
+    <section id="blast+" name="Blast +" version="">
     </section>
-    <section id="metagenomics" name="Metagenomic analyses" version="">
+    <section id="snpeff" name="snpEff" version="">
     </section>
     <section id="multiple_regression" name="Multiple regression" version="">
     </section>
     <section id="multivariate_analysis" name="Multivariate Analysis" version="">
     </section>
-    <section id="bxops" name="Operate on Genomic Intervals" version="">
-    </section>
     <section id="regional_variation" name="Regional Variation" version="">
     </section>
     <section id="hgv" name="HGV" version="">
+    </section>
+    <label id="ngs_analysis" text="NGS Analysis" version="" />
+    <section id="ngs_qc" name="NGS: QC and manipulation" version="">
+    </section>
+    <section id="ngs_mapping" name="NGS: Mapping" version="">
+    </section>
+    <section id="ngs_assembly" name="NGS: Assembly" version="">
+    </section>
+    <section id="ngs_rna_tools" name="NGS: RNA Analysis" version="">
+    </section>
+    <section id="peak_calling" name="NGS: Peak Calling" version="">
+    </section>
+    <section id="ngs_variant_detection" name="NGS: Variant Detection" version="">
+    </section>
+    <section id="ngs_variant_analysis" name="NGS: Variant Analysis" version="">
+    </section>
+    <section id="ngs_annotation" name="NGS: Annotation" version="">
+    </section>
+    <section id="metagenomics" name="Metagenomic analyses" version="">
     </section>
 </toolbox>
