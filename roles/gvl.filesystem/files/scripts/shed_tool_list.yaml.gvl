@@ -431,21 +431,6 @@ tools:
   revision: 379fdf4c41ac
   tool_panel_section_id: ngs_picard
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: ctd_batch
-  owner: devteam
-  revision: 4a32700dcaa2
-  tool_panel_section_id: hgv
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: hgv_fundo
-  owner: devteam
-  revision: 64133669255f
-  tool_panel_section_id: hgv
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: divide_pg_snp
-  owner: devteam
-  revision: f74fdfc17143
-  tool_panel_section_id: hgv
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: convert_characters
   owner: devteam
   revision: b1cac85bdd7a
@@ -490,11 +475,6 @@ tools:
   owner: devteam
   revision: af7fe71973ac
   tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: principal_component_analysis
-  owner: devteam
-  revision: f568051cdf2e
-  tool_panel_section_id: multivariate_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: variant_select
   owner: devteam
@@ -1026,25 +1006,10 @@ tools:
   revision: 2611a96c30b7
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: indels_3way
-  owner: devteam
-  revision: 5ad24b81dd10
-  tool_panel_section_id: regional_variation
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: microsatellite_birthdeath
-  owner: devteam
-  revision: 4e31fad3f08e
-  tool_panel_section_id: regional_variation
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: ncbi_sra_toolkit
   owner: matt-shirley
   revision: ce2bb7841f17
   tool_panel_section_id: getext
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: best_regression_subsets
-  owner: devteam
-  revision: 4f33ec73e445
-  tool_panel_section_id: multiple_regression
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_fetch_genome_dbkeys_all_fasta
   owner: devteam
