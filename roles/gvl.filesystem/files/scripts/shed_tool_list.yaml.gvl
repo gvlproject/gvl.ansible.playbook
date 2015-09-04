@@ -11,16 +11,6 @@ tools:
   revision: d054d95585b1
   tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: bowtie_color_wrappers
-  owner: devteam
-  revision: 065886169d72
-  tool_panel_section_id: ngs_mapping
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: bwa_wrappers
-  owner: devteam
-  revision: b4427dbb6ced
-  tool_panel_section_id: ngs_mapping
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: bowtie2
   owner: devteam
   revision: ceb6467e276c
@@ -31,20 +21,15 @@ tools:
   revision: 1d5aabeac76e
   tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: bowtie_wrappers
-  owner: devteam
-  revision: 9ca609a2a421
-  tool_panel_section_id: ngs_mapping
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: freebayes
   owner: devteam
   revision: 55c06df02168
-  tool_panel_section_id: ngs_variant_detection
+  tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: freebayes_wrapper
   owner: devteam
   revision: 33a0e6aca936
-  tool_panel_section_id: ngs_variant_detection
+  tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: barrnap
   owner: simon-gladman
@@ -476,6 +461,11 @@ tools:
   revision: af7fe71973ac
   tool_panel_section_id: textutil
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: gatk2
+  owner: iuc
+  revision: 84584664264c
+  tool_panel_section_id: gatk2
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: variant_select
   owner: devteam
   revision: 135e8721ffc5
@@ -664,7 +654,7 @@ tools:
 - name: snpeff
   owner: iuc
   revision: 500832f27cbc
-  tool_panel_section_id: snpeff
+  tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: gmaj
   owner: devteam
@@ -696,16 +686,6 @@ tools:
   revision: e997b710e38a
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: mine
-  owner: devteam
-  revision: 783d91de9e6d
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: vt_variant_tools
-  owner: iuc
-  revision: 6e073fc99d9c
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: vcf_filter
   owner: devteam
   revision: da1a6f33b504
@@ -714,96 +694,6 @@ tools:
 - name: vcf_annotate
   owner: devteam
   revision: b001b50f2009
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: microsats_alignment_level
-  owner: devteam
-  revision: ad471b193191
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: substitutions
-  owner: devteam
-  revision: c54f5d0bbb58
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: logistic_regression_vif
-  owner: devteam
-  revision: bd196d7c1ca9
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: table_annovar
-  owner: devteam
-  revision: 08b003ee9db7
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: rcve
-  owner: devteam
-  revision: 7740956d197b
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: dgidb_annotator
-  owner: devteam
-  revision: c5bb987015c5
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: substitution_rates
-  owner: devteam
-  revision: d1b35bcdaacc
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: snpfreq
-  owner: devteam
-  revision: 72ea0d13dd66
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: bamleftalign
-  owner: devteam
-  revision: e65540a91b87
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: partialr_square
-  owner: devteam
-  revision: 88ef41de020d
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: linear_regression
-  owner: devteam
-  revision: cf431604ec3e
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: featurecounter
-  owner: devteam
-  revision: ac6218e2b686
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: pgsnp2gd_snp
-  owner: devteam
-  revision: d281062566f9
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: mutate_snp_codon
-  owner: devteam
-  revision: 8f0af7251167
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: maf_cpg_filter
-  owner: devteam
-  revision: 7f2a12cb047d
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: getindelrates_3way
-  owner: devteam
-  revision: d427e5acb9ee
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: vcf2pgsnp
-  owner: devteam
-  revision: 5fca46616675
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: multispecies_orthologous_microsats
-  owner: devteam
-  revision: 275433d3a395
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: vcf_intersect
@@ -816,29 +706,9 @@ tools:
   revision: 76ad0b7865b9
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: quality_filter
-  owner: devteam
-  revision: 6c6f15373f96
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: compute_q_values
-  owner: devteam
-  revision: 62f7b9c20c9b
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: dna_filtering
-  owner: devteam
-  revision: a6f0d355b05f
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: varscan_version_2
   owner: devteam
   revision: 6f8cead3dc93
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: microsats_mutability
-  owner: devteam
-  revision: 4aa1ee5d8510
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: tabular_to_fasta
@@ -1015,7 +885,7 @@ tools:
   owner: devteam
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: data_manager_bwa_index_builder
+- name: data_manager_bwa_mem_index_builder
   owner: devteam
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
