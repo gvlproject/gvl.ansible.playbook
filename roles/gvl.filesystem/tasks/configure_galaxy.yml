@@ -24,6 +24,6 @@
   sudo_user: "{{ galaxy_user_name }}"
 
 - name: Set GATK2 Path
-  shell: "echo 'GATK2_PATH={{ galaxyFS_base_dir }}/tools/gatk2/GenomeAnalysisTK-2.8.jar; export GATK2_PATH' > /mnt/galaxy/tools/environment_settings/GATK2_PATH/iuc/gatk2/*/env.sh"
+  shell: executable=/bin/bash echo 'GATK2_PATH={{ galaxyFS_base_dir }}/tools/gatk2/GenomeAnalysisTK-2.8.jar; export GATK2_PATH' > /mnt/galaxy/tools/environment_settings/GATK2_PATH/iuc/gatk2/*/env.sh
   sudo: yes
   sudo_user: "{{ galaxy_user_name }}"
