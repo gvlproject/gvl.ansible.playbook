@@ -19,11 +19,13 @@
     owner: "{{ galaxy_user_name }}"
 
 - name: Fetch GATK2
-  get_url: url="https://swift.rc.nectar.org.au:8888/v1/AUTH_2bb45090fdb74f8c81359fbe723e4ab5/alonie/GenomeAnalysisTK-2.8.jar" dest="{{ galaxyFS_base_dir }}/tools/gatk2/GenomeAnalysisTK-2.8.jar"
+  get_url: url="https://swift.rc.nectar.org.au:8888/v1/AUTH_2bb45090fdb74f8c81359fbe723e4ab5/alonie/GenomeAnalysisTK-2.8.jar" dest="{{ galaxyFS_base_dir }}/tools/gatk2/GenomeAnalysisTK.jar"
   sudo: yes
   sudo_user: "{{ galaxy_user_name }}"
 
 - name: Set GATK2 Path
-  shell: executable=/bin/bash echo 'GATK2_PATH={{ galaxyFS_base_dir }}/tools/gatk2/GenomeAnalysisTK-2.8.jar; export GATK2_PATH' > /mnt/galaxy/tools/environment_settings/GATK2_PATH/iuc/gatk2/*/env.sh
+  shell: executable=/bin/bash echo 'GATK2_PATH={{ galaxyFS_base_dir }}/tools/gatk2; export GATK2_PATH' > /mnt/galaxy/tools/environment_settings/GATK2_PATH/iuc/gatk2/*/env.sh
   sudo: yes
   sudo_user: "{{ galaxy_user_name }}"
+
+
