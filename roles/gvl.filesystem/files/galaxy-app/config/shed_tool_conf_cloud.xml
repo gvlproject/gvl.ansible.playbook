@@ -33,9 +33,9 @@
   </section>
   <section id="ngs_annotation" name="NGS: Annotation">
   </section>
-  <section id="gatk" name="NGS: GATK Tools">
+  <section id="gatk" name="NGS: GATK Tools 1.4">
   </section>
-  <section id="gatk2" name="NGS: GATK2">
+  <section id="gatk2" name="NGS: GATK Tools 2.8">
   </section>
   <section id="ngs_mapping" name="NGS: Mapping">
   </section>
