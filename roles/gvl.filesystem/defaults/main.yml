@@ -33,7 +33,7 @@ galaxy_shed_tools_dir: "{{ galaxyFS_base_dir }}/shed_tools"
 galaxy_db_log: /tmp/pSQL.log
 
 galaxy_manage_trackster: yes
-len_file_path: "{{ galaxyFS_base_dir }}/configuration_data/len"
+len_file_path: "{{ galaxy_server_dir }}/tool-data/len"
 bedtools_version: 2.20.1
 
 gvl_fs_name: "GVL FileSystem"
