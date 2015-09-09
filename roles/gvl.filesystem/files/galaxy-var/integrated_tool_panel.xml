@@ -52,9 +52,9 @@
     </section>
     <section id="ngs_vcf_tools" name="NGS: VCF Manipulation" version="">
     </section>
-    <section id="gatk" name="NGS: GATK Tools" version="">
+    <section id="gatk" name="NGS: GATK Tools 1.4" version="">
     </section>
-    <section id="gatk2" name="NGS: GATK2" version="">
+    <section id="gatk2" name="NGS: GATK Tools 2.8" version="">
     </section>
     <section id="emboss" name="EMBOSS" version="">
     </section>
