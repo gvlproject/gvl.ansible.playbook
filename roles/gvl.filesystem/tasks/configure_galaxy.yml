@@ -32,6 +32,6 @@
 - name: Patchup bowtie2 executable paths so they work with tophat2 and modules
   shell: executable=/bin/bash cd {{ item }}/*/package*/*/; ln -s bowtie2 bowtie2-align
   with_fileglob:
-    - {{ galaxyFS_base_dir }}/tools/bowtie2/*
+    - "{{ galaxyFS_base_dir }}/tools/bowtie2/*"
   sudo: yes
   sudo_user: "{{ galaxy_user_name }}"
