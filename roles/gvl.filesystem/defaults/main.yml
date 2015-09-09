@@ -34,7 +34,6 @@ galaxy_db_log: /tmp/pSQL.log
 
 galaxy_manage_trackster: yes
 len_file_path: "{{ galaxy_server_dir }}/tool-data/len"
-bedtools_version: 2.20.1
 
 gvl_fs_name: "GVL FileSystem"
 gvl_fs_flavour: default
