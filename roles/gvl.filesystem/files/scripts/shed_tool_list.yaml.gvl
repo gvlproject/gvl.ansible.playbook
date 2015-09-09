@@ -603,7 +603,7 @@ tools:
 #---------------------------------------------------------------------
 # ngs_assembly - NGS: Assembly
 
-- name: velvetoptimiser_2_2_5
+- name: velvet_optimiser_2_2_5
   owner: simon-gladman
   revision: 1b3af4257210
   tool_panel_section_id: ngs_assembly
