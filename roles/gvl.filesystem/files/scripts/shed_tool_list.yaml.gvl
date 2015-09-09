@@ -14,7 +14,7 @@ tools:
   revision: ce2bb7841f17
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # send - Send Data
 
@@ -69,7 +69,7 @@ tools:
   revision: af7fe71973ac
   tool_panel_section_id: textutil
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # filter - Filter and Sort
 
@@ -89,7 +89,7 @@ tools:
   revision: b334cd1095ea
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # bxops - Operate on Genomic Intervals
 
@@ -113,7 +113,7 @@ tools:
   revision: 3b33da018e74
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # features - Extract Features
 
@@ -216,7 +216,7 @@ tools:
   revision: c5ab37076128
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # plots - Graph/Display Data
 
@@ -313,7 +313,7 @@ tools:
   revision: 379fdf4c41ac
   tool_panel_section_id: ngs_picard
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # samtools - NGS: SAM Tools
 
@@ -391,7 +391,7 @@ tools:
   revision: 41bba3e648d1
   tool_panel_section_id: bed_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # ngs_vcf_tools - NGS: VCF Manipulation
 
@@ -425,7 +425,7 @@ tools:
   revision: 1363e5d4a8b8
   tool_panel_section_id: ngs_vcf_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # gatk - NGS: GATK1.4 Tools
 
@@ -462,7 +462,7 @@ tools:
   revision: ce22ceec214a
   tool_panel_section_id: emboss
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # blast+ - Blast +
 
@@ -471,7 +471,7 @@ tools:
   revision: c16c30e9ad5b
   tool_panel_section_id: blast+
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # snpeff - snpEff
 
@@ -575,7 +575,7 @@ tools:
   revision: a60283899c6d
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # ngs_mapping - NGS: Mapping
 
@@ -603,9 +603,9 @@ tools:
 #---------------------------------------------------------------------
 # ngs_assembly - NGS: Assembly
 
-- name: velvetoptimiser
+- name: velvetoptimiser_2_2_5
   owner: simon-gladman
-  revision: 68faa0037476
+  revision: 1b3af4257210
   tool_panel_section_id: ngs_assembly
   tool_shed_url: http://testtoolshed.g2.bx.psu.edu
 - name: package_trinityrnaseq_2013_08_14
@@ -692,7 +692,7 @@ tools:
   revision: a8a56766694e
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # peak_calling - NGS: Peak Calling
 
@@ -724,7 +724,7 @@ tools:
 
 #---------------------------------------------------------------------
 # ngs_variant_detection - NGS: Variant Detection
-  
+
 #---------------------------------------------------------------------
 # ngs_variant_analysis - NGS: Variant Analysis
 
@@ -773,7 +773,7 @@ tools:
   revision: d1b35bcdaacc
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # ngs_annotation - NGS: Annotation
 
@@ -792,7 +792,7 @@ tools:
   revision: 3645d1bcc7bb
   tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  
+
 #---------------------------------------------------------------------
 # metagenomics - Metagenomic analyses
 
