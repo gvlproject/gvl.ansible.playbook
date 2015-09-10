@@ -380,7 +380,7 @@ tools:
 
 - name: picard
   owner: devteam
-  revision: 379fdf4c41ac
+  revision: 3a3234d7a2e8
   tool_panel_section_id: ngs_picard
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
@@ -603,7 +603,7 @@ tools:
 
 - name: ncbi_blast_plus
   owner: devteam
-  revision: c16c30e9ad5b
+  revision: e23b0cdeeba6
   tool_panel_section_id: blast+
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
@@ -721,7 +721,7 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: bowtie2
   owner: devteam
-  revision: ceb6467e276c
+  revision: e23b0cdeeba6
   tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: lastz
@@ -759,7 +759,7 @@ tools:
 
 - name: tophat2
   owner: devteam
-  revision: 5c5517d2a9e9
+  revision: 6202ec8aab61
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: tophat_fusion_post
