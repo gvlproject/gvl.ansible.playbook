@@ -738,9 +738,9 @@ tools:
 #---------------------------------------------------------------------
 # ngs_assembly - NGS: Assembly
 
-- name: velvet_optimiser_2_2_5
+- name: velvetoptimiser
   owner: simon-gladman
-  revision: 1b3af4257210
+  revision: 55327a2202ca
   tool_panel_section_id: ngs_assembly
   tool_shed_url: http://testtoolshed.g2.bx.psu.edu
 - name: package_trinityrnaseq_2013_08_14
