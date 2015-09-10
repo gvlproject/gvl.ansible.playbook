@@ -922,11 +922,6 @@ tools:
   revision: 0b8af9f63afc
   tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: vep_rest
-  owner: saket-choudhary
-  revision: 3645d1bcc7bb
-  tool_panel_section_id: ngs_annotation
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # metagenomics - Metagenomic analyses
