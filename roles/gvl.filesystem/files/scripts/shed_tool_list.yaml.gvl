@@ -429,9 +429,74 @@ tools:
 #---------------------------------------------------------------------
 # gatk - NGS: GATK1.4 Tools
 
-- name: suite_gatk_1_4
+- name: variant_select
   owner: devteam
-  revision: 3e6a4fcbf335
+  revision: 135e8721ffc5
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: analyze_covariates
+  owner: devteam
+  revision: 738bc749f9a3
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: variant_combine
+  owner: devteam
+  revision: 1a6e16391727
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: print_reads
+  owner: devteam
+  revision: e768f4851646
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: indel_realigner
+  owner: devteam
+  revision: bb0beda6cf83
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: variant_apply_recalibration
+  owner: devteam
+  revision: 350a4d0d1678
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: realigner_target_creator
+  owner: devteam
+  revision: 5b8eaae854da
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: table_recalibration
+  owner: devteam
+  revision: 30e1dd77e99c
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: variant_filtration
+  owner: devteam
+  revision: da6e2503c62d
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: variant_recalibrator
+  owner: devteam
+  revision: cb7cf57397a7
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: variants_validate
+  owner: devteam
+  revision: 7e1ecaa64370
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: variant_eval
+  owner: devteam
+  revision: fbca1c0956d2
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: unified_genotyper
+  owner: devteam
+  revision: 66dd4d4c1743
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: variant_annotator
+  owner: devteam
+  revision: ae9d0a543e9b
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: windowsplitter
