@@ -79,7 +79,7 @@ galaxy_config:
     file_path: "{{ galaxyFS_base_dir }}/files"
     tool_dependency_dir: "{{ galaxyFS_base_dir }}/tools"
     len_file_path: "{{ len_file_path }}"
-    shed_tool_data_path: "{{ galaxy_server_dir }}/tool-data/dm"
+    shed_tool_data_path: "{{ indicesFS_base_dir }}/tool-data/dm"
     galaxy_data_manager_data_path: "{{ galaxy_genome_data_path }}"
 
     tool_config_file: "{{ galaxy_config_dir }}/tool_conf.xml,{{ galaxy_config_dir }}/shed_tool_conf_cloud.xml,{{ galaxy_shed_tool_conf_file }}"
