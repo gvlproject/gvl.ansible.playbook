@@ -48,7 +48,7 @@ gvl_cmdline_repository: https://github.com/gvlproject/gvl_commandline_utilities
 gvl_user_home_dir: /mnt/gvl/home
 gvl_install_dash: yes
 gvl_dash_path: "{{ gvl_install_path }}/gvldash"
-gvl_dash_repository: https://bitbucket.org/gvl/gvldash
+gvl_dash_repository: https://github.com/gvlproject/gvldash
 gvl_dash_webuser: gvlwebuser
 
 gvl_version: "4.0.0"
