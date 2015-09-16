@@ -54,44 +54,9 @@ tools:
 #---------------------------------------------------------------------
 # textutil - Text Manipulation
 
-- name: convert_characters
-  owner: devteam
-  revision: b1cac85bdd7a
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: cut_columns
-  owner: devteam
-  revision: 1378064e5d24
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: remove_beginning
-  owner: devteam
-  revision: bb66956af1eb
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: merge_cols
-  owner: devteam
-  revision: f2aac0c5c60d
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: column_maker
   owner: devteam
   revision: 08a01b2ce4cd
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: show_tail
-  owner: devteam
-  revision: e1c9fd6651f8
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: show_beginning
-  owner: devteam
-  revision: 618fbda86659
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: change_case
-  owner: devteam
-  revision: 3970d288ee1f
   tool_panel_section_id: textutil
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: condense_characters
