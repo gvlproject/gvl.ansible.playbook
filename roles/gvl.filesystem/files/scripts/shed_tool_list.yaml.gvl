@@ -3,6 +3,36 @@ galaxy_instance: <IP address for target Galaxy instance>
 tools:
 
 ######################################################################
+## PACKAGES
+######################################################################
+
+- name: package_libcurl_7_35
+  owner: iuc
+  revision: 0d934b13250c
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_trinityrnaseq_2013_08_14
+  owner: jjohnson
+  revision: 9be1cbdae115
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_emboss_5_0_0
+  owner: devteam
+  revision: cf998ddc0542
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_cummerbund_2_8_2
+  owner: iuc
+  revision: 13c270433440
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_cufflinks_2_2_1
+  owner: devteam
+  revision: 899067a260d1
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_trinityrnaseq_2013_08_14
+  owner: jjohnson
+  revision: 9be1cbdae115
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+
+
+######################################################################
 ## BASIC TOOLS
 ######################################################################
 
@@ -24,44 +54,9 @@ tools:
 #---------------------------------------------------------------------
 # textutil - Text Manipulation
 
-- name: convert_characters
-  owner: devteam
-  revision: b1cac85bdd7a
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: cut_columns
-  owner: devteam
-  revision: 1378064e5d24
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: remove_beginning
-  owner: devteam
-  revision: bb66956af1eb
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: merge_cols
-  owner: devteam
-  revision: f2aac0c5c60d
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: column_maker
   owner: devteam
   revision: 08a01b2ce4cd
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: show_tail
-  owner: devteam
-  revision: e1c9fd6651f8
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: show_beginning
-  owner: devteam
-  revision: 618fbda86659
-  tool_panel_section_id: textutil
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: change_case
-  owner: devteam
-  revision: 3970d288ee1f
   tool_panel_section_id: textutil
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: condense_characters
@@ -89,6 +84,26 @@ tools:
   revision: b334cd1095ea
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: fasta_to_tabular
+  owner: devteam
+  revision: 9d189d08f2ad
+  tool_panel_section_id: convert
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+ - name: fastq_to_tabular
+   owner: devteam
+   revision: bc9269529e88
+   tool_panel_section_id: convert
+   tool_shed_url: https://toolshed.g2.bx.psu.edu
+ - name: fastqtofasta
+   owner: devteam
+   revision: 3571553aeb20
+   tool_panel_section_id: convert
+   tool_shed_url: https://toolshed.g2.bx.psu.edu
+ - name: bam_to_fastq
+   owner: brad-chapman
+   revision: 5a9ada9a3191
+   tool_panel_section_id: convert
+   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # bxops - Operate on Genomic Intervals
@@ -136,11 +151,6 @@ tools:
   revision: cb422b6f49d2
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: scatterplot
-  owner: devteam
-  revision: c12b0759203b
-  tool_panel_section_id: stats
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: dwt_var_perfeature
   owner: devteam
   revision: d56c5d2e1a29
@@ -179,11 +189,6 @@ tools:
 - name: poisson2test
   owner: devteam
   revision: 8cd5945559b8
-  tool_panel_section_id: stats
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: histogram
-  owner: devteam
-  revision: 6ff47de059a0
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: t_test_two_samples
@@ -248,6 +253,16 @@ tools:
 - name: draw_stacked_barplots
   owner: devteam
   revision: e997b710e38a
+  tool_panel_section_id: plots
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: histogram
+  owner: devteam
+  revision: 6ff47de059a0
+  tool_panel_section_id: plots
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: scatterplot
+  owner: devteam
+  revision: c12b0759203b
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
@@ -369,11 +384,6 @@ tools:
   revision: 16679a7f554a
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: fasta_to_tabular
-  owner: devteam
-  revision: 9d189d08f2ad
-  tool_panel_section_id: fasta_manipulation
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # ngs_picard - NGS: Picard
@@ -440,11 +450,6 @@ tools:
 - name: pileup_parser
   owner: devteam
   revision: 1670f0565000
-  tool_panel_section_id: samtools
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: bam_to_fastq
-  owner: brad-chapman
-  revision: 5a9ada9a3191
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: bcftools_view
@@ -635,11 +640,6 @@ tools:
   revision: 1cdcaf5fc1da
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: fastq_to_tabular
-  owner: devteam
-  revision: bc9269529e88
-  tool_panel_section_id: ngs_qc
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_filter
   owner: devteam
   revision: 30d9ece6c752
@@ -675,11 +675,6 @@ tools:
   revision: c549e99026db
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: fastqtofasta
-  owner: devteam
-  revision: 3571553aeb20
-  tool_panel_section_id: ngs_qc
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_masker_by_quality
   owner: devteam
   revision: 5a7b5751617b
@@ -705,11 +700,11 @@ tools:
   revision: 2611a96c30b7
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: trimmomatic
-  owner: pjbriggs
-  revision: a60283899c6d
+- name: trimmomatic_032
+  owner: simon-gladman
+  revision: cb56fdcbe0a5
   tool_panel_section_id: ngs_qc
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # ngs_mapping - NGS: Mapping
@@ -742,12 +737,7 @@ tools:
   owner: simon-gladman
   revision: 55327a2202ca
   tool_panel_section_id: ngs_assembly
-  tool_shed_url: http://testtoolshed.g2.bx.psu.edu
-- name: package_trinityrnaseq_2013_08_14
-  owner: jjohnson
-  revision: 9be1cbdae115
-  tool_panel_section_id: ngs_assembly
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
 - name: trinityrnaseq
   owner: biomonika
   revision: 39b85d32b0bf
