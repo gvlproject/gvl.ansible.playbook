@@ -84,6 +84,26 @@ tools:
   revision: b334cd1095ea
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: fasta_to_tabular
+  owner: devteam
+  revision: 9d189d08f2ad
+  tool_panel_section_id: convert
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+ - name: fastq_to_tabular
+   owner: devteam
+   revision: bc9269529e88
+   tool_panel_section_id: convert
+   tool_shed_url: https://toolshed.g2.bx.psu.edu
+ - name: fastqtofasta
+   owner: devteam
+   revision: 3571553aeb20
+   tool_panel_section_id: convert
+   tool_shed_url: https://toolshed.g2.bx.psu.edu
+ - name: bam_to_fastq
+   owner: brad-chapman
+   revision: 5a9ada9a3191
+   tool_panel_section_id: convert
+   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # bxops - Operate on Genomic Intervals
@@ -364,11 +384,6 @@ tools:
   revision: 16679a7f554a
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: fasta_to_tabular
-  owner: devteam
-  revision: 9d189d08f2ad
-  tool_panel_section_id: fasta_manipulation
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # ngs_picard - NGS: Picard
@@ -435,11 +450,6 @@ tools:
 - name: pileup_parser
   owner: devteam
   revision: 1670f0565000
-  tool_panel_section_id: samtools
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: bam_to_fastq
-  owner: brad-chapman
-  revision: 5a9ada9a3191
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: bcftools_view
@@ -630,11 +640,6 @@ tools:
   revision: 1cdcaf5fc1da
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: fastq_to_tabular
-  owner: devteam
-  revision: bc9269529e88
-  tool_panel_section_id: ngs_qc
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_filter
   owner: devteam
   revision: 30d9ece6c752
@@ -668,11 +673,6 @@ tools:
 - name: fastq_paired_end_splitter
   owner: devteam
   revision: c549e99026db
-  tool_panel_section_id: ngs_qc
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: fastqtofasta
-  owner: devteam
-  revision: 3571553aeb20
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: fastq_masker_by_quality
