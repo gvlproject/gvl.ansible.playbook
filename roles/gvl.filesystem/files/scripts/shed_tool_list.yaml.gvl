@@ -3,6 +3,36 @@ galaxy_instance: <IP address for target Galaxy instance>
 tools:
 
 ######################################################################
+## PACKAGES
+######################################################################
+
+- name: package_libcurl_7_35
+  owner: iuc
+  revision: 0d934b13250c
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_trinityrnaseq_2013_08_14
+  owner: jjohnson
+  revision: 9be1cbdae115
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_emboss_5_0_0
+  owner: devteam
+  revision: cf998ddc0542
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_cummerbund_2_8_2
+  owner: iuc
+  revision: 13c270433440
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_cufflinks_2_2_1
+  owner: devteam
+  revision: 899067a260d1
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_trinityrnaseq_2013_08_14
+  owner: jjohnson
+  revision: 9be1cbdae115
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+
+
+######################################################################
 ## BASIC TOOLS
 ######################################################################
 
@@ -743,11 +773,6 @@ tools:
   revision: 55327a2202ca
   tool_panel_section_id: ngs_assembly
   tool_shed_url: http://testtoolshed.g2.bx.psu.edu
-- name: package_trinityrnaseq_2013_08_14
-  owner: jjohnson
-  revision: 9be1cbdae115
-  tool_panel_section_id: ngs_assembly
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: trinityrnaseq
   owner: biomonika
   revision: 39b85d32b0bf
