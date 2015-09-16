@@ -735,11 +735,11 @@ tools:
   revision: 2611a96c30b7
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: trimmomatic
-  owner: pjbriggs
-  revision: a60283899c6d
+- name: trimmomatic_032
+  owner: simon-gladman
+  revision: cb56fdcbe0a5
   tool_panel_section_id: ngs_qc
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_shed_url: http://testtoolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # ngs_mapping - NGS: Mapping
