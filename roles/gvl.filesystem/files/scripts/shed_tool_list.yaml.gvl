@@ -131,11 +131,6 @@ tools:
   revision: cb422b6f49d2
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: scatterplot
-  owner: devteam
-  revision: c12b0759203b
-  tool_panel_section_id: stats
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: dwt_var_perfeature
   owner: devteam
   revision: d56c5d2e1a29
@@ -174,11 +169,6 @@ tools:
 - name: poisson2test
   owner: devteam
   revision: 8cd5945559b8
-  tool_panel_section_id: stats
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: histogram
-  owner: devteam
-  revision: 6ff47de059a0
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: t_test_two_samples
@@ -243,6 +233,16 @@ tools:
 - name: draw_stacked_barplots
   owner: devteam
   revision: e997b710e38a
+  tool_panel_section_id: plots
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: histogram
+  owner: devteam
+  revision: 6ff47de059a0
+  tool_panel_section_id: plots
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: scatterplot
+  owner: devteam
+  revision: c12b0759203b
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
