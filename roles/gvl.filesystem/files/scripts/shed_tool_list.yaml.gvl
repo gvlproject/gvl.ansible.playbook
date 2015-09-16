@@ -704,7 +704,7 @@ tools:
   owner: simon-gladman
   revision: cb56fdcbe0a5
   tool_panel_section_id: ngs_qc
-  tool_shed_url: http://testtoolshed.g2.bx.psu.edu
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # ngs_mapping - NGS: Mapping
@@ -737,7 +737,7 @@ tools:
   owner: simon-gladman
   revision: 55327a2202ca
   tool_panel_section_id: ngs_assembly
-  tool_shed_url: http://testtoolshed.g2.bx.psu.edu
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
 - name: trinityrnaseq
   owner: biomonika
   revision: 39b85d32b0bf
