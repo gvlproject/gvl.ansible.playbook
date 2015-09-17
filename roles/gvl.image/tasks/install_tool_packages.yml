@@ -3,4 +3,3 @@
   apt: pkg={{ item }} state=latest
   with_items:
     - tophat
-    - r-base-core
