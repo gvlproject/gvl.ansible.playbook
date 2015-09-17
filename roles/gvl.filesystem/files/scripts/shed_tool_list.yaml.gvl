@@ -31,6 +31,11 @@ tools:
   revision: f6ae3ba3f3c1
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_fastx_toolkit_0_0_13
+  owner: devteam
+  revision: ec66ae4c269b
+  tool_panel_section_id: getext
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: package_cummerbund_2_8_2
   owner: iuc
   revision: 13c270433440
@@ -110,9 +115,9 @@ tools:
   revision: bc9269529e88
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: fastqtofasta
+- name: fastq_to_fasta
   owner: devteam
-  revision: 3571553aeb20
+  revision: 04614cf6ed39
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: bam_to_fastq
