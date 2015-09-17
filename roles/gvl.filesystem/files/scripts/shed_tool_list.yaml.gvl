@@ -9,26 +9,32 @@ tools:
 - name: package_libcurl_7_35
   owner: iuc
   revision: 0d934b13250c
+  tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: package_trinityrnaseq_2013_08_14
   owner: jjohnson
   revision: 9be1cbdae115
+  tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: package_emboss_5_0_0
   owner: devteam
   revision: cf998ddc0542
+  tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: package_cummerbund_2_8_2
   owner: iuc
   revision: 13c270433440
+  tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: package_cufflinks_2_2_1
   owner: devteam
   revision: 899067a260d1
+  tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: package_trinityrnaseq_2013_08_14
   owner: jjohnson
   revision: 9be1cbdae115
+  tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 
