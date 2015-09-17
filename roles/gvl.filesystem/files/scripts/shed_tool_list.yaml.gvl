@@ -21,6 +21,11 @@ tools:
   revision: cf998ddc0542
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_r_3_1_2
+  owner: iuc
+  revision: 9f2fddb9d6e2
+  tool_panel_section_id: getext
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: package_cummerbund_2_8_2
   owner: iuc
   revision: 13c270433440
