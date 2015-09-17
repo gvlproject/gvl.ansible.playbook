@@ -26,6 +26,11 @@ tools:
   revision: 9f2fddb9d6e2
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: package_samtools_1_2
+  owner: devteam
+  revision: f6ae3ba3f3c1
+  tool_panel_section_id: getext
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: package_cummerbund_2_8_2
   owner: iuc
   revision: 13c270433440
@@ -408,9 +413,69 @@ tools:
 #---------------------------------------------------------------------
 # samtools - NGS: SAM Tools
 
-- name: suite_samtools_1_2
+- name: samtools_rmdup
   owner: devteam
-  revision: 5b673ccc8747
+  revision: 3735f950b2f5
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: bam_to_sam
+  owner: devteam
+  revision: af7c50162f0b
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: samtools_sort
+  owner: devteam
+  revision: a430da4f04cd
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: samtools_calmd
+  owner: devteam
+  revision: 1ebb4ecdc1ef
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: samtools_slice_bam
+  owner: devteam
+  revision: 2b474ebbfc7d
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: samtools_bedcov
+  owner: devteam
+  revision: 8c3472790020
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: samtools_stats
+  owner: devteam
+  revision: 0d71d9467847
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: samtools_split
+  owner: devteam
+  revision: 57f3e32f809d
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: samtools_reheader
+  owner: devteam
+  revision: 020e144b5f78
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: sam_to_bam
+  owner: devteam
+  revision: d04d9f1c6791
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: samtools_flagstat
+  owner: devteam
+  revision: 0072bf593791
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: samtools_idxstats
+  owner: devteam
+  revision: 87398ae795c7
+  tool_panel_section_id: samtools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: samtools_mpileup
+  owner: devteam
+  revision: aa0ef6f0ee89
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: pileup_interval
