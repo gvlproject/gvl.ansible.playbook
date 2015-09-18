@@ -27,7 +27,7 @@ tools:
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: package_samtools_1_2
-  owner: devteam
+  owner: iuc
   revision: f6ae3ba3f3c1
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
