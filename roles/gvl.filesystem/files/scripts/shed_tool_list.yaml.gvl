@@ -6,6 +6,11 @@ tools:
 ## PACKAGES
 ######################################################################
 
+- name: package_freetype_2_4
+  owner: iuc
+  revision: 90e515a1abe2
+  tool_panel_section_id: getext
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: package_libcurl_7_35
   owner: iuc
   revision: 0d934b13250c
@@ -132,16 +137,6 @@ tools:
 - name: suite_gops_1_0
   owner: devteam
   revision: c82347870270
-  tool_panel_section_id: bxops
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: depth_of_coverage
-  owner: devteam
-  revision: c3f08370fc82
-  tool_panel_section_id: bxops
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: trimmer
-  owner: devteam
-  revision: e632b6c79f7b
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: annotation_profiler
@@ -665,6 +660,11 @@ tools:
   revision: fabda887a71f
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: depth_of_coverage
+  owner: devteam
+  revision: c3f08370fc82
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # gatk2 - NGS: GATK2.8 Tools
@@ -1075,25 +1075,31 @@ tools:
 
 - name: data_manager_fetch_genome_dbkeys_all_fasta
   owner: devteam
+  revision: bca4c608408c
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_bwa_mem_index_builder
   owner: devteam
+  revision: cb0147ade868
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_bowtie2_index_builder
   owner: devteam
+  revision: 9bf4eb559ed5
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_gatk_picard_index_builder
   owner: devteam
+  revision: 700f2df51eb0
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_sam_fasta_index_builder
   owner: devteam
+  revision: 2a1ac1abc3f7
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_snpeff
   owner: iuc
+  revision: 9ac823a8b328
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
