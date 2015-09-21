@@ -134,16 +134,6 @@ tools:
   revision: c82347870270
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: depth_of_coverage
-  owner: devteam
-  revision: c3f08370fc82
-  tool_panel_section_id: bxops
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: trimmer
-  owner: devteam
-  revision: e632b6c79f7b
-  tool_panel_section_id: bxops
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: annotation_profiler
   owner: devteam
   revision: 3b33da018e74
@@ -663,6 +653,11 @@ tools:
 - name: count_gff_features
   owner: devteam
   revision: fabda887a71f
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: depth_of_coverage
+  owner: devteam
+  revision: c3f08370fc82
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
