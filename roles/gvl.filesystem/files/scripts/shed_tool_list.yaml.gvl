@@ -1070,25 +1070,31 @@ tools:
 
 - name: data_manager_fetch_genome_dbkeys_all_fasta
   owner: devteam
+  revision: bca4c608408c
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_bwa_mem_index_builder
   owner: devteam
+  revision: cb0147ade868
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_bowtie2_index_builder
   owner: devteam
+  revision: 9bf4eb559ed5
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_gatk_picard_index_builder
   owner: devteam
+  revision: 700f2df51eb0
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_sam_fasta_index_builder
   owner: devteam
+  revision: 2a1ac1abc3f7
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_snpeff
   owner: iuc
+  revision: 9ac823a8b328
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
