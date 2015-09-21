@@ -6,6 +6,11 @@ tools:
 ## PACKAGES
 ######################################################################
 
+- name: package_freetype_2_4
+  owner: iuc
+  revision: 90e515a1abe2
+  tool_panel_section_id: getext
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: package_libcurl_7_35
   owner: iuc
   revision: 0d934b13250c
