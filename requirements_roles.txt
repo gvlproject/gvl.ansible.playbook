@@ -6,3 +6,6 @@ galaxyprojectdotorg.trackster
 galaxyprojectdotorg.galaxy
 galaxyprojectdotorg.cloudman-galaxy-setup
 galaxyprojectdotorg.galaxy-tools
+gvl.ansible.image
+gvl.ansible.filesystem
+gvl.ansible.filesystem.presetup

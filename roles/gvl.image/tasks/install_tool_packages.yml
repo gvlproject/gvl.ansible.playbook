@@ -1,5 +1,0 @@
-# Install tool packages
-- name: Install required tool packages
-  apt: pkg={{ item }} state=latest
-  with_items:
-    - tophat

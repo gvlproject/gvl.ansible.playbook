@@ -19,7 +19,7 @@
   # gather_facts: False  # Uncomment during dev only
   sudo: yes
   roles:
-    - gvl.image
+    - gvl.ansible.image
   tags: gvl-image
 
 # To build the galaxyFS, use this role via the following command (make sure
@@ -35,5 +35,5 @@
   sudo_user: galaxy
 #   gather_facts: False  # Not making system-level changes so skip
   roles:
-     - gvl.filesystem
+     - gvl.ansible.filesystem
   tags: gvl-fs
