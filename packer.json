@@ -62,7 +62,7 @@
   },
   {
     "type": "ansible-local",
-    "playbook_file": "cloud.yml",
+    "playbook_file": "playbook.yml",
     "role_paths": [
       "roles/galaxyprojectdotorg.cloudman-image",
       "roles/galaxyprojectdotorg.cloudman-database",
@@ -72,9 +72,9 @@
       "roles/galaxyprojectdotorg.galaxy-tools",
       "roles/galaxyprojectdotorg.trackster",
       "roles/smola.java",
-      "roles/gvl.image",
-      "roles/gvl.filesystem-presetup",
-      "roles/gvl.filesystem"
+      "roles/gvl.ansible.image",
+      "roles/gvl.ansible.filesystem.presetup",
+      "roles/gvl.ansible.filesystem"
     ],
     "extra_arguments": [
        "--extra-vars",
@@ -89,7 +89,7 @@
   },
   {
     "type": "ansible-local",
-    "playbook_file": "cloud.yml",
+    "playbook_file": "playbook.yml",
     "role_paths": [
       "roles/galaxyprojectdotorg.cloudman-image",
       "roles/galaxyprojectdotorg.cloudman-database",
@@ -98,9 +98,9 @@
       "roles/galaxyprojectdotorg.galaxy",
       "roles/galaxyprojectdotorg.trackster",
       "roles/smola.java",
-      "roles/gvl.image",
-      "roles/gvl.filesystem-presetup",
-      "roles/gvl.filesystem"
+      "roles/gvl.ansible.image",
+      "roles/gvl.ansible.filesystem.presetup",
+      "roles/gvl.ansible.filesystem"
     ],
     "extra_arguments": [
        "--extra-vars",
@@ -111,7 +111,7 @@
   },
   {
     "type": "ansible-local",
-    "playbook_file": "cloud.yml",
+    "playbook_file": "playbook.yml",
     "extra_arguments": [
        "--extra-vars",
        "psql_galaxyftp_password='{{user `gftp_pwd`}}'",
