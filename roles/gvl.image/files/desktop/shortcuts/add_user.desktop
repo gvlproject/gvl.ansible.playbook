@@ -1,8 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=Add New User
-Comment=Add a new user to the server
-Exec=lxterminal --command "/opt/gvl/scripts/cmdlineutils/add_newuser.sh"
-Icon=utilities-terminal-symbolic
-Terminal=false
-Type=Application

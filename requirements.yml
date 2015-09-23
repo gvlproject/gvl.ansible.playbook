@@ -1,0 +1,3 @@
+- src: https://github.com/gvlproject/gvl.ansible.filesystem.presetup
+- src: https://github.com/gvlproject/gvl.ansible.filesystem
+- src: https://github.com/gvlproject/gvl.ansible.image

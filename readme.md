@@ -35,7 +35,7 @@ instance and set the instance IP address under `image-builder` host group in the
 `builders` file. Also, set `hosts` line in `cloud.yml` to `image-builder` while
 commenting out `connection: local` line. Finally, run the role with
 
-    ansible-galaxy install -r requirements_roles.txt -p roles
+    ansible-galaxy install -r requirements.yml -p roles
     ansible-playbook -i inventory/builders cloud.yml --tags "gvl-image" --extra-vars vnc_password=<choose a password> --extra-vars psql_galaxyftp_password=<choose a password> --extra-vars cleanup=yes
 
 On average, the build time takes about 30 minutes. *Note that after the playbook
