@@ -13,27 +13,21 @@
 #   % ansible-playbook -i inventory/builders cloud.yml --tags "machine-image"
 #     --extra-vars vnc_password=<make_up_a_pwd> [--extra-vars cleanup=yes]
 #
-# - hosts: localhost
-#   connection: local
 - hosts: gvl-image-hosts
-  # gather_facts: False  # Uncomment during dev only
   sudo: yes
   roles:
     - gvl.ansible.image
   tags: gvl-image
 
-# To build the galaxyFS, use this role via the following command (make sure
+# To build the gvl filesystem, use this role via the following command (make sure
 # you provided an instance IP in ``inventory/builders`` for
-# ``galaxyFS-builder`` host group):
+# ``gvl-filesystem-hosts`` host group):
 #
-#   % ansible-playbook -i inventory/builders cloud.yml --tags "galaxyFS"
+#   % ansible-playbook -i inventory/builders cloud.yml --tags "gvl-fs"
 #
-# - hosts: localhost
-#   connection: local
 - hosts: gvl-filesystem-hosts
   sudo: yes
   sudo_user: galaxy
-#   gather_facts: False  # Not making system-level changes so skip
   roles:
      - gvl.ansible.filesystem
   tags: gvl-fs
