@@ -5,8 +5,8 @@
     "vnc_pwd": "{{env `CM_VNC_PWD`}}",
     "gftp_pwd": "{{env `CM_GALAXY_FTP_PWD`}}",
     "image_name": "GVL 4.0.0 Image {{timestamp}}",
-    "source_ami": "ami-b1eb9e8b",
-    "instance_type": "m1.medium",
+    "source_ami": "ami-69631053",
+    "instance_type": "m3.large",
     "os_source_image": "d57696ba-5ed2-43fe-bf78-a587829973a9",
     "os_flavor": "1"
   },
@@ -63,6 +63,7 @@
   {
     "type": "ansible-local",
     "playbook_file": "playbook.yml",
+    "inventory_groups" : "gvl-image-hosts,gvl-filesystem-hosts"
     "role_paths": [
       "roles/galaxyprojectdotorg.cloudman-image",
       "roles/galaxyprojectdotorg.cloudman-database",
@@ -90,18 +91,7 @@
   {
     "type": "ansible-local",
     "playbook_file": "playbook.yml",
-    "role_paths": [
-      "roles/galaxyprojectdotorg.cloudman-image",
-      "roles/galaxyprojectdotorg.cloudman-database",
-      "roles/galaxyprojectdotorg.cloudman-galaxy-setup",
-      "roles/galaxyprojectdotorg.galaxy-os",
-      "roles/galaxyprojectdotorg.galaxy",
-      "roles/galaxyprojectdotorg.trackster",
-      "roles/smola.java",
-      "roles/gvl.ansible.image",
-      "roles/gvl.ansible.filesystem.presetup",
-      "roles/gvl.ansible.filesystem"
-    ],
+    "inventory_groups" : "gvl-image-hosts,gvl-filesystem-hosts"
     "extra_arguments": [
        "--extra-vars",
        "psql_galaxyftp_password='{{user `gftp_pwd`}}'",
@@ -112,6 +102,7 @@
   {
     "type": "ansible-local",
     "playbook_file": "playbook.yml",
+    "inventory_groups" : "gvl-image-hosts,gvl-filesystem-hosts"
     "extra_arguments": [
        "--extra-vars",
        "psql_galaxyftp_password='{{user `gftp_pwd`}}'",
