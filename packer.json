@@ -63,7 +63,7 @@
   {
     "type": "ansible-local",
     "playbook_file": "playbook.yml",
-    "inventory_groups" : "gvl-image-hosts,gvl-filesystem-hosts"
+    "inventory_groups" : "gvl-image-hosts,gvl-filesystem-hosts",
     "role_paths": [
       "roles/galaxyprojectdotorg.cloudman-image",
       "roles/galaxyprojectdotorg.cloudman-database",
@@ -91,7 +91,7 @@
   {
     "type": "ansible-local",
     "playbook_file": "playbook.yml",
-    "inventory_groups" : "gvl-image-hosts,gvl-filesystem-hosts"
+    "inventory_groups" : "gvl-image-hosts,gvl-filesystem-hosts",
     "extra_arguments": [
        "--extra-vars",
        "psql_galaxyftp_password='{{user `gftp_pwd`}}'",
@@ -102,7 +102,7 @@
   {
     "type": "ansible-local",
     "playbook_file": "playbook.yml",
-    "inventory_groups" : "gvl-image-hosts,gvl-filesystem-hosts"
+    "inventory_groups" : "gvl-image-hosts,gvl-filesystem-hosts",
     "extra_arguments": [
        "--extra-vars",
        "psql_galaxyftp_password='{{user `gftp_pwd`}}'",
