@@ -35,7 +35,7 @@ instance and set the instance IP address under `image-builder` host group in the
 `builders` file.
 
     ansible-galaxy install -r requirements.yml -p roles
-    ansible-playbook -i inventory/builders cloud.yml --tags "gvl-image" --extra-vars vnc_password=<choose a password> --extra-vars psql_galaxyftp_password=<choose a password> --extra-vars cleanup=yes
+    ansible-playbook -i inventory/builders playbook.yml --tags "gvl-image" --extra-vars vnc_password=<choose a password> --extra-vars psql_galaxyftp_password=<choose a password> --extra-vars cleanup=yes
 
 On average, the build time takes about 3 hours. *Note that after the playbook
 has run to completion, you will no longer be able to ssh into the instance!* If
@@ -58,7 +58,7 @@ CloudMan comes up, choose the *Cluster only* with *transient storage* option
 `inventory/builders` file under `galaxyFS-builder` host group and change the value
 of `psql_galaxyftp_password` in `group_vars/all`; run the role with
 
-    ansible-playbook -i inventory/builders cloud.yml --tags "gvl-fs"
+    ansible-playbook -i inventory/builders playbook.yml --tags "gvl-fs" --extra-vars psql_galaxyftp_password=<choose a password>
 
 Running above command will automatically install a number of Galaxy tools. The list of
 tools that can be installed can be changed by editing `shed_tool_list.yaml.gvl`.
