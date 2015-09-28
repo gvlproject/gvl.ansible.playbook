@@ -31,3 +31,15 @@
   roles:
      - gvl.ansible.filesystem
   tags: gvl-fs
+
+# To build the gvl microfilesystem, use this role via the following command (make sure
+# you provided an instance IP in ``inventory/builders`` for
+# ``gvl-filesystem-hosts`` host group):
+#
+#   % ansible-playbook -i inventory/builders cloud.yml --tags "mgvl-fs"
+- hosts: gvl-filesystem-hosts
+  sudo: yes
+  sudo_user: galaxy
+  roles:
+     - microgvl.ansible.filesystem
+  tags: mgvl-fs
