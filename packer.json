@@ -75,7 +75,8 @@
       "roles/smola.java",
       "roles/gvl.ansible.image",
       "roles/gvl.ansible.filesystem.presetup",
-      "roles/gvl.ansible.filesystem"
+      "roles/gvl.ansible.filesystem",
+      "roles/microgvl.ansible.filesystem"
     ],
     "extra_arguments": [
        "--extra-vars",
