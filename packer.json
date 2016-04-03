@@ -107,6 +107,8 @@
     "extra_arguments": [
        "--extra-vars",
        "psql_galaxyftp_password='{{user `gftp_pwd`}}'",
+       "--tags",
+       "gvl-image",
        "--extra-vars",
        "only_cleanup=yes"
     ]

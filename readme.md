@@ -23,10 +23,10 @@ Machine Image
 The easiest method for building the base machine image is to use [Packer][packer].
 Once you have it installed, check any variables specified at the top of
 `packer.json`, check the formatting of the file with `packer validate packer.json`,
-and run it with `packer build packer.json`. The command will provison an instance,
+and run it with `packer build packer.json`. The command will provision an instance,
 run the Ansible image build role, and create a Machine Image. By default, images will be
 created on both AWS and Openstack/NeCTAR. Custom options
-can be set by editing `packer.json`, under `extra_arguments` section.
+can be set by editing `packer.json`, under the `extra_arguments` section.
 
 To build an image without Packer, make sure the default values provided in the
 gvl.ansible.image role and gvl.ansible.filesystem role suite you. Create
