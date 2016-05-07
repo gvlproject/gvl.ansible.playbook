@@ -7,7 +7,7 @@
     "image_name": "GVL 4.1.0 Image {{timestamp}}",
     "source_ami": "ami-69631053",
     "instance_type": "m3.large",
-    "os_source_image": "d57696ba-5ed2-43fe-bf78-a587829973a9",
+    "os_source_image": "c8663e68-921c-4e0a-9048-d9e042a4b41f",
     "os_flavor": "1"
   },
 
@@ -55,6 +55,7 @@
       "sleep 30",
       "sudo add-apt-repository ppa:fkrull/deadsnakes-python2.7",
       "sudo apt-get update",
+      "sudo apt-get install -y libffi-dev libssl-dev",
       "sudo apt-get -y upgrade",
       "sudo apt-get install -y python2.7 python-pip python-dev build-essential",
       "sudo pip install --upgrade ansible"
