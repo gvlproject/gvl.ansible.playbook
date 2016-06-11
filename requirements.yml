@@ -6,6 +6,5 @@
   name: galaxyprojectdotorg.cloudman-image
 - src: https://github.com/gvlproject/gvl.ansible.filesystem.presetup
 - src: https://github.com/gvlproject/gvl.ansible.filesystem
-- src: https://github.com/gvlproject/microgvl.ansible.filesystem
 - src: https://github.com/gvlproject/gvl.ansible.image
   version: GCC2016
