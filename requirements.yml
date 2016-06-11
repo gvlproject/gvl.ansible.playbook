@@ -4,7 +4,10 @@
 - src: https://github.com/nuwang/ansible-cloudman-image
   version: GCC2016
   name: galaxyprojectdotorg.cloudman-image
+- src: https://github.com/nuwang/ansible-cloudman-galaxy-setup
+  name: galaxyprojectdotorg.cloudman-galaxy-setup
 - src: https://github.com/gvlproject/gvl.ansible.filesystem.presetup
 - src: https://github.com/gvlproject/gvl.ansible.filesystem
+  version: GCC2016
 - src: https://github.com/gvlproject/gvl.ansible.image
   version: GCC2016
