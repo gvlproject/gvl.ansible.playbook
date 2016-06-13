@@ -27,7 +27,6 @@
 #
 - hosts: gvl-filesystem-hosts
   sudo: yes
-  sudo_user: galaxy
   roles:
      - gvl.ansible.filesystem
   tags: gvl-fs
