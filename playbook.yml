@@ -1,5 +1,5 @@
 ---
-# file: cloud.yml
+# file: playbook.yml
 #   Use this file to setup components required for the GVL
 
 # Before running roles inside this playbook, copy
@@ -10,11 +10,11 @@
 # you provided an instance IP in ``inventory/builders`` for
 # ``gvl-image-hosts`` host group):
 #
-#   % ansible-playbook -i inventory/builders cloud.yml --tags "machine-image"
+#   % ansible-playbook -i inventory/builders playbook.yml --tags "gvl-image"
 #     --extra-vars vnc_password=<make_up_a_pwd> [--extra-vars cleanup=yes]
 #
 - hosts: gvl-image-hosts
-  sudo: yes
+  become: yes
   roles:
     - gvl.ansible.image
   tags: gvl-image
@@ -23,10 +23,10 @@
 # you provided an instance IP in ``inventory/builders`` for
 # ``gvl-filesystem-hosts`` host group):
 #
-#   % ansible-playbook -i inventory/builders cloud.yml --tags "gvl-fs"
+#   % ansible-playbook -i inventory/builders playbook.yml --tags "gvl-fs"
 #
 - hosts: gvl-filesystem-hosts
-  sudo: yes
+  become: yes
   roles:
      - gvl.ansible.filesystem
   tags: gvl-fs
