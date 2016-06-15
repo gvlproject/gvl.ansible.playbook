@@ -4,7 +4,7 @@
 - src: https://github.com/nuwang/ansible-cloudman-image
   version: GCC2016
   name: galaxyprojectdotorg.cloudman-image
-- src: https://github.com/nuwang/ansible-cloudman-galaxy-setup
+- src: https://github.com/galaxyproject/ansible-cloudman-galaxy-setup
   name: galaxyprojectdotorg.cloudman-galaxy-setup
 - src: https://github.com/galaxyproject/ansible-galaxy-tools
   name: galaxyprojectdotorg.galaxy-tools
