@@ -18,6 +18,15 @@ the build process of different components:
 
 These roles are intended to be run on an Ubuntu (14.04) system.
 
+Installing
+----------
+To get going, it is necessary to clone this repository and then pull in all
+the dependent roles:
+```
+git clone https://github.com/gvlproject/gvl.ansible.playbook.git
+ansible-galaxy install -r requirements.yml -p roles
+```
+
 Machine Image
 -------------
 The easiest method for building the base machine image is to use [Packer][packer].
@@ -25,23 +34,22 @@ Once you have it installed, check any variables specified at the top of
 `packer.json`, check the formatting of the file with `packer validate packer.json`,
 and run it with `packer build packer.json`. The command will provision an instance,
 run the Ansible image build role, and create a Machine Image. By default, images will be
-created on both AWS and Openstack/NeCTAR. Custom options
+created on both AWS and the [NeCTAR cloud][nectar] (OpenStack-based). Custom options
 can be set by editing `packer.json`, under the `extra_arguments` section.
 
-To build an image without Packer, make sure the default values provided in the
-gvl.ansible.image role and gvl.ansible.filesystem role suite you. Create
-a copy of `inventory/builders.sample` as `inventory/builders`, launch a new
-instance and set the instance IP address under `image-builder` host group in the
-`builders` file.
+Alternatively, to build an image without Packer, make sure the default values
+provided in the `gvl.ansible.image` role and `gvl.ansible.filesystem` role suite
+you. Create a copy of `inventory/builders.sample` as `inventory/builders`, launch
+a new instance and set the instance IP address under `gvl-image-hosts` host
+group in the `builders` file.
 
-    ansible-galaxy install -r requirements.yml -p roles
     ansible-playbook -i inventory/builders playbook.yml --tags "gvl-image" --extra-vars vnc_password=<choose a password> --extra-vars psql_galaxyftp_password=<choose a password> --extra-vars cleanup=yes
 
 On average, the build time takes about 3 hours. *Note that after the playbook
 has run to completion, you will no longer be able to ssh into the instance!* If
 you still need to ssh, set `--extra-vars cleanup=no` in the above command.
-Before creating the image, however, you must rerun the playbook with that flag
-set.
+If you run with that flag, before creating the image, you must rerun the
+playbook with that flag set.
 
 ### Customizing
 A configuration file exposing adjustable options is available under
@@ -82,3 +90,4 @@ and/or managed may also require changes in CloudMan.
 [building]: https://wiki.galaxyproject.org/CloudMan/Building
 [production]: https://wiki.galaxyproject.org/Admin/Config/Performance/ProductionServer
 [packer]: https://packer.io/
+[nectar]: https://nectar.org.au/research-cloud/
