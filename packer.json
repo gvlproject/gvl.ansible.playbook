@@ -102,6 +102,12 @@
     ]
   },
   {
+    "type": "shell",
+    "scripts": [
+      "scripts/zerodisk.sh"
+    ]
+  },
+  {
     "type": "ansible-local",
     "playbook_file": "playbook.yml",
     "inventory_groups" : "gvl-image-hosts,gvl-filesystem-hosts",
