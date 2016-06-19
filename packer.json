@@ -5,7 +5,7 @@
     "vnc_pwd": "{{env `CM_VNC_PWD`}}",
     "gftp_pwd": "{{env `CM_GALAXY_FTP_PWD`}}",
     "image_name": "GVL 4.1.0 Image {{timestamp}}",
-    "source_ami": "ami-69631053",
+    "source_ami": "ami-6c14310f",
     "instance_type": "m3.large",
     "os_source_image": "c8663e68-921c-4e0a-9048-d9e042a4b41f",
     "os_flavor": "1"
