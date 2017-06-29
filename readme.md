@@ -16,7 +16,7 @@ the build process of different components:
   **GVL-FS**: Installs components required for a GVL filesystem snapshot.
   Implements only the differences from a base CloudMan filesystem.
 
-These roles are intended to be run on an Ubuntu (14.04) system.
+These roles are intended to be run on an Ubuntu (16.04) system.
 
 Installing
 ----------
