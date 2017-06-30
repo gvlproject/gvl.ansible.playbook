@@ -1,8 +1,28 @@
 This [Ansible][ansible] playbook is used to build the components required to run
-[The Genomics Virtual Laboratory (GVL)][GVL]. The playbook
-is heavily reliant on the [Galaxy CloudMan playbook][cloudman] and is intended
-for anyone wanting to deploy a customised version of the GVL on a public or
-private cloud. The overall process for building the GVL follows very closely
+[The Genomics Virtual Laboratory (GVL)][GVL]. If you do not plan to make any
+customisations of the GVL build, and you are using an OpenStack based cloud,
+you do not need to build the image yourself and can download a publicly available
+image instead. Otherwise, see the "Build your Own Image" section for instructions
+on creating a customised build.
+
+
+Downloading a pre-built image
+-----------------------------
+GVL 4.2.0 Beta 1 - [Download](https://swift.rc.nectar.org.au:8888/v1/AUTH_377/gvl_resources/images/GVL_4.2.0_beta1.qcow2)
+
+GVL 4.1.0 - [Download](https://swift.rc.nectar.org.au:8888/v1/AUTH_377/gvl_resources/images/GVL_4.1.0.qcow2)
+
+GVL 4.0.0 - [Download](https://swift.rc.nectar.org.au:8888/v1/AUTH_377/gvl_resources/images/GVL_4.0.0.qcow2)
+
+See the "Launching" section below for information on how to make your image launchable
+on your private cloud. 
+
+
+Building your own image
+-----------------------
+The playbook is heavily reliant on the [Galaxy CloudMan playbook][cloudman] and
+is intended for anyone wanting to deploy a customised version of the GVL on a
+public or private cloud. The overall process for building the GVL follows very closely
 the one for building *Galaxy on the Cloud* and hence it is recommended to first
 read [this page][building] that describes the high-level concepts of the build
 process - just use this playbook instead of the one mentioned in that document.
@@ -81,6 +101,17 @@ The configuration options have been aggregated under
 Keep in mind that changing the options that influence how the system is deployed
 and/or managed may also require changes in CloudMan.
 
+Launching
+----------
+Once the Machine Image has been built (or downloaded from our public images) and made
+available on your private cloud, the next step is to configure the
+[GVL launcher](https://beta.launch.usegalaxy.org) so that it can launch the built image.
+You cannot directly launch the image without the Launcher because the launcher passes
+in some "user data" to contextualize the image, and manually performing this process
+is error-prone, inconvenient and therefore not recommended. To get your cloud/image
+added to the launcher, simply mail us at help@genome.edu.au and we'll help you with
+the process. 
+  
 
 [ansible]: http://www.ansible.com/
 [GVL]: http://genome.edu.au/
