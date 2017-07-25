@@ -110,7 +110,10 @@ You cannot directly launch the image without the Launcher because the launcher p
 in some "user data" to contextualize the image, and manually performing this process
 is error-prone, inconvenient and therefore not recommended. To get your cloud/image
 added to the launcher, simply mail us at help@genome.edu.au and we'll help you with
-the process. 
+the process.
+
+Alternatively, you can also setup your own private
+[launch](https://github.com/galaxyproject/cloudlaunch) server. 
   
 
 [ansible]: http://www.ansible.com/
