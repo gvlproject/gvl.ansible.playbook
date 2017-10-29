@@ -1,5 +1,5 @@
 # Indirect requirements - not required but listed for convenience
-- src: https://github.com/galaxyproject/ansible-galaxy-os.git
+- src: https://github.com/gvlproject/ansible-galaxy-os.git
   name: galaxyproject.galaxy-os
 - src: https://github.com/gvlproject/ansible-cloudman-image.git
   name: galaxyproject.cloudman-image
