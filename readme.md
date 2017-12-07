@@ -47,6 +47,14 @@ git clone https://github.com/gvlproject/gvl.ansible.playbook.git
 ansible-galaxy install -r requirements.yml -p roles
 ```
 
+If targeting AWS instances and want to have Elastic Network Adapter (ENA)
+enabled, you will also need to install `boto` (v2) and `awscli` Python packages
+as well as export the following environment vars with their appropriate values:
+`EC2_REGION`, `AWS_ACCESS_KEY`, `AWS_SECRET_KEY`. The target instance will need
+to have an elastic IP associated with it and you will also need to set the path
+to your Python interpreter in the inventory file under the localhost host
+definition.
+
 Machine Image
 -------------
 The easiest method for building the base machine image is to use [Packer][packer].
@@ -63,7 +71,7 @@ you. Create a copy of `inventory/builders.sample` as `inventory/builders`, launc
 a new instance and set the instance IP address under `gvl-image-hosts` host
 group in the `builders` file.
 
-    ansible-playbook -i inventory/builders playbook.yml --tags "gvl-image" --extra-vars vnc_password=<choose a password> --extra-vars psql_galaxyftp_password=<choose a password> --extra-vars cleanup=yes
+    ansible-playbook -i inventory/builders playbook.yml --tags "gvl-image" --extra-vars vnc_password=<choose a password> --extra-vars psql_galaxyftp_password=<choose a password> --extra-vars cleanup=yes [--extra-vars cm_aws_instance_id=<aws inst id>]
 
 On average, the build time takes about 3 hours. *Note that after the playbook
 has run to completion, you will no longer be able to ssh into the instance!* If
