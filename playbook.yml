@@ -15,6 +15,14 @@
 #
 - hosts: gvl-image-hosts
   sudo: yes
+  gather_facts: no
+  pre_tasks:
+    - name: Install python2 (required for Supervisor)
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+      register: output
+      changed_when: output.stdout != ""
+    - name: Gather facts after py2
+      setup:
   roles:
     - gvl.ansible.image
   tags: gvl-image

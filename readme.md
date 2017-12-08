@@ -50,10 +50,12 @@ ansible-galaxy install -r requirements.yml -p roles
 If targeting AWS instances and want to have Elastic Network Adapter (ENA)
 enabled, you will also need to install `boto` (v2) and `awscli` Python packages
 as well as export the following environment vars with their appropriate values:
-`EC2_REGION`, `AWS_ACCESS_KEY`, `AWS_SECRET_KEY`. The target instance will need
-to have an elastic IP associated with it and you will also need to set the path
-to your Python interpreter in the inventory file under the localhost host
-definition.
+`EC2_REGION`, `AWS_ACCESS_KEY`, `AWS_SECRET_KEY`. If you have multiple profiles
+defined for your `aws` command (i.e., in `~/aws/credentials`) and you don't want
+to use the default one, also do `export AWS_PROFILE=<profile name>`. The target
+instance will need to have an elastic IP associated with it and you will also
+need to set the path to your Python interpreter in the inventory file under the
+localhost host definition.
 
 Machine Image
 -------------
@@ -73,7 +75,7 @@ group in the `builders` file.
 
     ansible-playbook -i inventory/builders playbook.yml --tags "gvl-image" --extra-vars vnc_password=<choose a password> --extra-vars psql_galaxyftp_password=<choose a password> --extra-vars cleanup=yes [--extra-vars cm_aws_instance_id=<aws inst id>]
 
-On average, the build time takes about 3 hours. *Note that after the playbook
+On average, the build time takes about 1 hour. *Note that after the playbook
 has run to completion, you will no longer be able to ssh into the instance!* If
 you still need to ssh, set `--extra-vars cleanup=no` in the above command.
 If you run with that flag, before creating the image, you must rerun the
