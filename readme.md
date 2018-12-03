@@ -8,6 +8,8 @@ on creating a customised build.
 
 Downloading a pre-built image
 -----------------------------
+GVL 4.4.0 - [Download](https://swift.rc.nectar.org.au:8888/v1/AUTH_377/gvl_resources/images/GVL_4.4.0.qcow2)
+
 GVL 4.3.0 - [Download](https://swift.rc.nectar.org.au:8888/v1/AUTH_377/gvl_resources/images/GVL_4.3.0.qcow2)
 
 GVL 4.2.0 - [Download](https://swift.rc.nectar.org.au:8888/v1/AUTH_377/gvl_resources/images/GVL_4.2.0.qcow2)
